@@ -28,6 +28,20 @@
     return [self sizeWithText:text font:font maxW:MAXFLOAT];
 }
 
+
+/**
+ * 设置时间的Frame
+ */
+- (CGRect)tiemLabelF{
+    CGFloat timeX = SAStatusCellBorderW + 43 + SAStatusCellBorderW;
+    CGFloat timeY = CGRectGetMaxY(self.nameLabelF) + SAStatusCellBorderW;
+    CGSize timeSize = [self sizeWithText:self.status.created_at font:SAStatusCellTimeFont];
+    return  (CGRect){{timeX,timeY},timeSize};
+}
+
+/**
+ * 设置Cell的Frame
+ */
 - (void)setStatus:(SAStatus *)status{
     
     _status = status;
@@ -65,7 +79,6 @@
     CGFloat timeY = CGRectGetMaxY(self.nameLabelF) + SAStatusCellBorderW;
     CGSize timeSize = [self sizeWithText:status.created_at font:SAStatusCellTimeFont];
      self.tiemLabelF = (CGRect){{timeX,timeY},timeSize};
-    
     /** 来源*/
     CGFloat sourceX = CGRectGetMaxX(self.tiemLabelF) + SAStatusCellBorderW;
     CGFloat sourceY = timeY;

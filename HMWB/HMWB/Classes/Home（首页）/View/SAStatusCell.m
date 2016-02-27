@@ -185,12 +185,14 @@
 - (void)setStatusFrame:(SAStatusFrame *)statusFrame{
     _statusFrame = statusFrame;
     
+    
     SAStatus *status = statusFrame.status;
     SAUser *user = status.user;
     
     //1.原创微博~~~~~~~~~~~~~~~~
     
     /** 原创微博整体*/
+    
     self.orginalView.frame = statusFrame.orginalViewF;
     
     /** 头像*/

@@ -30,7 +30,7 @@
 
 @implementation SAHomeViewController
 
-- (NSMutableArray *)stautses{
+- (NSMutableArray *)stautsesFrame{
     if (_stautsesFrame == nil) {
         _stautsesFrame = [[NSMutableArray alloc]init];
     }
@@ -156,7 +156,7 @@
     [self.tableView addSubview:conrtol];
     
     //2.开始刷新状态
-    [conrtol beginRefreshing];
+    [conrtol beginRefreshing];//刷新指示
     [self refreshStateChang:conrtol];
 }
 
@@ -190,7 +190,7 @@
         
         //添加新数据到数组最前面
         NSIndexSet *set = [NSIndexSet indexSetWithIndexesInRange:NSMakeRange(0, newFrames.count)];//范围参数
-        [self.stautses insertObjects:newFrames atIndexes:set];//将数组插某个范围
+        [self.stautsesFrame insertObjects:newFrames atIndexes:set];//将数组插某个范围
         //刷新表格
         [self.tableView reloadData];
         //结束刷新
@@ -286,7 +286,7 @@
         NSArray *newStatuses = [SAStatus objectArrayWithKeyValuesArray:responseObject[@"statuses"]];
         NSArray *newFrames = [self stausFramesWithStatuses:newStatuses];
         // 将更多的微博数据，添加到总数组的最后面
-        [self.stautses addObjectsFromArray:newFrames];
+        [self.stautsesFrame addObjectsFromArray:newFrames];
         
         // 刷新表格
         [self.tableView reloadData];
@@ -395,7 +395,8 @@
     //给cell传递模型数据
     //[cell setStatusFrame:[self stautsesFrame][indexPath.row]];
     cell.statusFrame = self.stautsesFrame[indexPath.row];
-   
+    
+    
     return cell;
 }
 
