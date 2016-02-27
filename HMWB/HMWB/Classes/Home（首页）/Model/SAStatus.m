@@ -16,6 +16,9 @@
     return @{@"pic_urls" : [SAPhoto class]};
 }
 
+/**
+ * 重写时间的Get方法
+ */
 - (NSString *)created_at{
     
     //    Thu Oct 16 17:06:25 +0800 2014
@@ -69,5 +72,26 @@
         return [fmt stringFromDate:createDate];
     }
 }
+
+/**
+ * 重写来源的Set方法
+ */
+- (void)setSource:(NSString *)source{
+    if (source.length != 0) {
+        NSRange range = NSMakeRange(0, 0);
+        range.location = [source rangeOfString:@">"].location + 1;
+        range.length = [source rangeOfString:@"<" options:NSBackwardsSearch].location - range.location;
+        _source = [NSString stringWithFormat:@"来自%@",[source substringWithRange:range]];
+    }
+   
+    
+    
+
+}
+
+
+
+
+
 
 @end

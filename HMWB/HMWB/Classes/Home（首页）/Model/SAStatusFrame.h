@@ -22,6 +22,8 @@
 #define SARetweetStatusCellContentFont [UIFont systemFontOfSize:13]
 //cell的间距
 #define SAStatusCellMargin 15
+//cell的边框宽度
+#define SAStatusCellBorderW 10
 
 
 @class SAStatus;

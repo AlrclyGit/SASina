@@ -129,6 +129,7 @@
     /** 时间*/
     UILabel * tiemLabel = [[UILabel alloc]init];
     tiemLabel.font = SAStatusCellTimeFont;
+    tiemLabel.textColor = [UIColor orangeColor];
     self.tiemLabel =tiemLabel;
     [self.orginalView addSubview:tiemLabel];
     
@@ -228,11 +229,18 @@
     self.nameLabel.text = user.name;
 
     /** 时间*/
-    self.tiemLabel.frame = statusFrame.tiemLabelF;
-    self.tiemLabel.text = status.created_at;
-
+    NSString *time = status.created_at;
+    CGFloat timeX = statusFrame.nameLabelF.origin.x;
+    CGFloat timeY = CGRectGetMaxY(statusFrame.nameLabelF) + SAStatusCellBorderW;
+    CGSize timeSize = [time sizeWithFont:SAStatusCellContentFont];
+    self.tiemLabel.frame = (CGRect){{timeX,timeY},timeSize};
+    self.tiemLabel.text = time;
+    
     /** 来源*/
-    self.sourceLabel.frame = statusFrame.sourceLabelF;
+    CGFloat sourceX = CGRectGetMaxX(statusFrame.tiemLabelF) + SAStatusCellBorderW;
+    CGFloat sourceY = timeY;
+    CGSize sourceSize = [status.source sizeWithFont:SAStatusCellContentFont];
+    self.sourceLabel.frame = (CGRect){{sourceX,sourceY},sourceSize};;
     self.sourceLabel.text = status.source;
 
     /** 正文*/

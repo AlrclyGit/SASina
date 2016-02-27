@@ -10,34 +10,9 @@
 #import "SAStatus.h"
 #import "SAUser.h"
 
-//cell的边框宽度
-#define SAStatusCellBorderW 10
+
 
 @implementation SAStatusFrame
-
-- (CGSize)sizeWithText:(NSString *)text font:(UIFont *)font maxW:(CGFloat)maxW{
-    NSMutableDictionary *attrs = [NSMutableDictionary dictionary];
-    attrs[NSFontAttributeName] = font;
-    //[text sizeWithAttributes:attrs]
-    CGSize maxSize = CGSizeMake(maxW , MAXFLOAT);
-    return [text boundingRectWithSize:maxSize options:NSStringDrawingUsesLineFragmentOrigin attributes:attrs context:nil].size;
-}
-
-- (CGSize)sizeWithText:(NSString *)text font:(UIFont *)font{
-    
-    return [self sizeWithText:text font:font maxW:MAXFLOAT];
-}
-
-
-/**
- * 设置时间的Frame
- */
-- (CGRect)tiemLabelF{
-    CGFloat timeX = SAStatusCellBorderW + 43 + SAStatusCellBorderW;
-    CGFloat timeY = CGRectGetMaxY(self.nameLabelF) + SAStatusCellBorderW;
-    CGSize timeSize = [self sizeWithText:self.status.created_at font:SAStatusCellTimeFont];
-    return  (CGRect){{timeX,timeY},timeSize};
-}
 
 /**
  * 设置Cell的Frame
@@ -62,7 +37,7 @@
     /** 昵称*/
     CGFloat nameX = CGRectGetMaxX(self.iconViewF) + SAStatusCellBorderW;
     CGFloat nameY = iconY;
-    CGSize nameSize = [self sizeWithText:user.name font:SAStatusCellNameFont];
+    CGSize nameSize = [user.name sizeWithFont:SAStatusCellNameFont];
     self.nameLabelF = (CGRect){{nameX,nameY},nameSize};
     
     /** 会员图片*/
@@ -77,19 +52,19 @@
     /** 时间*/
     CGFloat timeX = nameX;
     CGFloat timeY = CGRectGetMaxY(self.nameLabelF) + SAStatusCellBorderW;
-    CGSize timeSize = [self sizeWithText:status.created_at font:SAStatusCellTimeFont];
+    CGSize timeSize = [status.created_at sizeWithFont:SAStatusCellTimeFont];
      self.tiemLabelF = (CGRect){{timeX,timeY},timeSize};
     /** 来源*/
     CGFloat sourceX = CGRectGetMaxX(self.tiemLabelF) + SAStatusCellBorderW;
     CGFloat sourceY = timeY;
-    CGSize sourceSize = [self sizeWithText:status.source font:SAStatusCellSourceFont];
+    CGSize sourceSize = [status.source sizeWithFont:SAStatusCellContentFont];
     self.sourceLabelF = (CGRect){{sourceX,sourceY},sourceSize};
 
     /** 正文*/
     CGFloat contentX = iconX;
     CGFloat contentY = MAX(CGRectGetMaxY(self.iconViewF), CGRectGetMaxY(self.tiemLabelF)) + SAStatusCellBorderW;
     CGFloat maxW = cellW - 2 * contentX;
-    CGSize contentSize = [self sizeWithText:status.text font:SAStatusCellContentFont maxW:maxW];
+    CGSize contentSize = [status.text sizeWithFont:SAStatusCellContentFont maxW:maxW];
     self.contentLabelF = (CGRect){{contentX,contentY},contentSize};
     
     /** 配图*/
@@ -133,7 +108,7 @@
         CGFloat retweetContentX = SAStatusCellBorderW;
         CGFloat retweetContentY = SAStatusCellBorderW;
         CGFloat retweetContentW = cellW - 2 * contentX;
-        CGSize retweetContentSize = [self sizeWithText:retweetContent font:SARetweetStatusCellContentFont maxW:retweetContentW];
+        CGSize retweetContentSize = [retweetContent sizeWithFont:SARetweetStatusCellContentFont maxW:retweetContentW];
         self.retweetContentLabelF = (CGRect){{retweetContentX,retweetContentY},retweetContentSize};
         
         /** 被转发的微博配图*/

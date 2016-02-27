@@ -77,6 +77,7 @@
 		AC731B9D1C8041100003C142 /* SAStatusCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AC731B9C1C8041100003C142 /* SAStatusCell.m */; };
 		AC7E971C1C73605B00BBE4DC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AC7E97191C73605B00BBE4DC /* main.m */; };
 		AC8145841C81931C00F51A55 /* NSDate+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = AC8145831C81931C00F51A55 /* NSDate+Extension.m */; };
+		AC8145871C81D82100F51A55 /* NSString+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = AC8145861C81D82100F51A55 /* NSString+Extension.m */; };
 		ACB1A5931C770BE50045BE22 /* SATabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = ACB1A5921C770BE50045BE22 /* SATabBar.m */; };
 		ACBB0CFF1C72D5E9007C128C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ACBB0CFE1C72D5E9007C128C /* Assets.xcassets */; };
 		ACBB0D021C72D5E9007C128C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ACBB0D001C72D5E9007C128C /* LaunchScreen.storyboard */; };
@@ -245,6 +246,8 @@
 		AC7E971A1C73605B00BBE4DC /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		AC8145821C81931C00F51A55 /* NSDate+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+Extension.h"; sourceTree = "<group>"; };
 		AC8145831C81931C00F51A55 /* NSDate+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+Extension.m"; sourceTree = "<group>"; };
+		AC8145851C81D82100F51A55 /* NSString+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Extension.h"; sourceTree = "<group>"; };
+		AC8145861C81D82100F51A55 /* NSString+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Extension.m"; sourceTree = "<group>"; };
 		ACB1A5911C770BE50045BE22 /* SATabBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SATabBar.h; sourceTree = "<group>"; };
 		ACB1A5921C770BE50045BE22 /* SATabBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SATabBar.m; sourceTree = "<group>"; };
 		ACBB0CEF1C72D5E9007C128C /* HMWB.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HMWB.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -521,6 +524,8 @@
 				AC0E44E41C7AE02D00DCD867 /* UIWindow+Extension.m */,
 				AC8145821C81931C00F51A55 /* NSDate+Extension.h */,
 				AC8145831C81931C00F51A55 /* NSDate+Extension.m */,
+				AC8145851C81D82100F51A55 /* NSString+Extension.h */,
+				AC8145861C81D82100F51A55 /* NSString+Extension.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -937,6 +942,7 @@
 				AC0EEFEF1C7A097800512949 /* AFURLRequestSerialization.m in Sources */,
 				AC2242271C7EE56300464561 /* MJMember.m in Sources */,
 				ACF5880E1C7AF1CE0069CDB5 /* Foundation+Log.m in Sources */,
+				AC8145871C81D82100F51A55 /* NSString+Extension.m in Sources */,
 				AC6BFAE11C7AC74E002E83F9 /* MBProgressHUD+MJ.m in Sources */,
 				AC0EEFEE1C7A097800512949 /* AFURLConnectionOperation.m in Sources */,
 				AC2242251C7EE56300464561 /* MJFoundation.m in Sources */,
