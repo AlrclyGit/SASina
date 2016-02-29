@@ -9,10 +9,11 @@
 #import "SAStatusFrame.h"
 #import "SAStatus.h"
 #import "SAUser.h"
-
+#import "SAStatusPhotosView.h"
 
 
 @implementation SAStatusFrame
+
 
 /**
  * 设置Cell的Frame
@@ -70,11 +71,12 @@
     /** 配图*/
     CGFloat orginalViewH = 0;
     if (status.pic_urls.count) {//有配图
-        CGFloat photoWH = 100;
-        CGFloat photoX = contentX;
-        CGFloat photoY = CGRectGetMaxY(self.contentLabelF) + SAStatusCellBorderW;
-        self.photoViewF = CGRectMake(photoX, photoY, photoWH, photoWH);
-        orginalViewH = CGRectGetMaxY(self.photoViewF) + SAStatusCellBorderW;
+        CGFloat photosX = contentX;
+        CGFloat photosY = CGRectGetMaxY(self.contentLabelF) + SAStatusCellBorderW;
+        CGSize photoSize = [SAStatusPhotosView sizeWithCount:status.pic_urls.count];
+        self.photosViewF = (CGRect){{photosX, photosY}, photoSize};
+        
+        orginalViewH = CGRectGetMaxY(self.photosViewF) + SAStatusCellBorderW;
     }
     else{
         orginalViewH = CGRectGetMaxY(self.contentLabelF) + SAStatusCellBorderW;
@@ -116,11 +118,12 @@
       
         
         if (retweeted_status.pic_urls.count) {//有图片
-            CGFloat retweetPhotoWH = 100;
-            CGFloat  retweetphotoX = retweetContentX;
-            CGFloat  retweetphotoY = CGRectGetMaxY(self.retweetContentLabelF) + SAStatusCellBorderW;
-            self.retweetPhotoViewF = CGRectMake( retweetphotoX, retweetphotoY, retweetPhotoWH, retweetPhotoWH);
-            retweetH = CGRectGetMaxY(self.retweetPhotoViewF) +SAStatusCellBorderW;
+           
+            CGFloat  retweetPhotosX = retweetContentX;
+            CGFloat  retweetPhotosY = CGRectGetMaxY(self.retweetContentLabelF) + SAStatusCellBorderW;
+            CGSize retweetPhotosSize = [SAStatusPhotosView sizeWithCount:retweeted_status.pic_urls.count];
+            self.retweetPhotosViewF = (CGRect){{retweetPhotosX, retweetPhotosY}, retweetPhotosSize};
+            retweetH = CGRectGetMaxY(self.retweetPhotosViewF) +SAStatusCellBorderW;
         }
         else{//没有配图
             retweetH = CGRectGetMaxY(self.retweetContentLabelF) +SAStatusCellBorderW;

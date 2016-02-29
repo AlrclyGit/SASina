@@ -23,6 +23,7 @@
 		AC0F86791C7C9BCB00EFA630 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = AC0F86781C7C9BCB00EFA630 /* Info.plist */; };
 		AC0F9DE51C7BEC8B00DD4B18 /* SAUser.m in Sources */ = {isa = PBXBuildFile; fileRef = AC0F9DE41C7BEC8B00DD4B18 /* SAUser.m */; };
 		AC0F9DE81C7BECB600DD4B18 /* SAStatus.m in Sources */ = {isa = PBXBuildFile; fileRef = AC0F9DE71C7BECB600DD4B18 /* SAStatus.m */; };
+		AC1490AE1C846FE000171072 /* SAStatusPhotoView.m in Sources */ = {isa = PBXBuildFile; fileRef = AC1490AD1C846FE000171072 /* SAStatusPhotoView.m */; };
 		AC16A5D21C7B4EB200139596 /* MKAnnotationView+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = AC16A5B21C7B4EB200139596 /* MKAnnotationView+WebCache.m */; };
 		AC16A5D31C7B4EB200139596 /* NSData+ImageContentType.m in Sources */ = {isa = PBXBuildFile; fileRef = AC16A5B41C7B4EB200139596 /* NSData+ImageContentType.m */; };
 		AC16A5D41C7B4EB200139596 /* SDImageCache.m in Sources */ = {isa = PBXBuildFile; fileRef = AC16A5B61C7B4EB200139596 /* SDImageCache.m */; };
@@ -79,6 +80,7 @@
 		AC8145841C81931C00F51A55 /* NSDate+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = AC8145831C81931C00F51A55 /* NSDate+Extension.m */; };
 		AC8145871C81D82100F51A55 /* NSString+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = AC8145861C81D82100F51A55 /* NSString+Extension.m */; };
 		ACB1A5931C770BE50045BE22 /* SATabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = ACB1A5921C770BE50045BE22 /* SATabBar.m */; };
+		ACB6F5381C8410FC000B3F4C /* SAStatusPhotosView.m in Sources */ = {isa = PBXBuildFile; fileRef = ACB6F5371C8410FC000B3F4C /* SAStatusPhotosView.m */; };
 		ACBB0CFF1C72D5E9007C128C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ACBB0CFE1C72D5E9007C128C /* Assets.xcassets */; };
 		ACBB0D021C72D5E9007C128C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ACBB0D001C72D5E9007C128C /* LaunchScreen.storyboard */; };
 		ACBB0D0D1C72D5E9007C128C /* HMWBTests.m in Sources */ = {isa = PBXBuildFile; fileRef = ACBB0D0C1C72D5E9007C128C /* HMWBTests.m */; };
@@ -139,6 +141,8 @@
 		AC0F9DE41C7BEC8B00DD4B18 /* SAUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SAUser.m; sourceTree = "<group>"; };
 		AC0F9DE61C7BECB600DD4B18 /* SAStatus.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SAStatus.h; sourceTree = "<group>"; };
 		AC0F9DE71C7BECB600DD4B18 /* SAStatus.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SAStatus.m; sourceTree = "<group>"; };
+		AC1490AC1C846FE000171072 /* SAStatusPhotoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SAStatusPhotoView.h; sourceTree = "<group>"; };
+		AC1490AD1C846FE000171072 /* SAStatusPhotoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SAStatusPhotoView.m; sourceTree = "<group>"; };
 		AC16A5B11C7B4EB200139596 /* MKAnnotationView+WebCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MKAnnotationView+WebCache.h"; sourceTree = "<group>"; };
 		AC16A5B21C7B4EB200139596 /* MKAnnotationView+WebCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MKAnnotationView+WebCache.m"; sourceTree = "<group>"; };
 		AC16A5B31C7B4EB200139596 /* NSData+ImageContentType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+ImageContentType.h"; sourceTree = "<group>"; };
@@ -250,6 +254,8 @@
 		AC8145861C81D82100F51A55 /* NSString+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Extension.m"; sourceTree = "<group>"; };
 		ACB1A5911C770BE50045BE22 /* SATabBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SATabBar.h; sourceTree = "<group>"; };
 		ACB1A5921C770BE50045BE22 /* SATabBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SATabBar.m; sourceTree = "<group>"; };
+		ACB6F5361C8410FC000B3F4C /* SAStatusPhotosView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SAStatusPhotosView.h; sourceTree = "<group>"; };
+		ACB6F5371C8410FC000B3F4C /* SAStatusPhotosView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SAStatusPhotosView.m; sourceTree = "<group>"; };
 		ACBB0CEF1C72D5E9007C128C /* HMWB.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HMWB.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ACBB0CFE1C72D5E9007C128C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		ACBB0D011C72D5E9007C128C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -491,6 +497,10 @@
 				AC731B9C1C8041100003C142 /* SAStatusCell.m */,
 				AC731B981C8040A60003C142 /* SAStatusToolBar.h */,
 				AC731B991C8040A60003C142 /* SAStatusToolBar.m */,
+				ACB6F5361C8410FC000B3F4C /* SAStatusPhotosView.h */,
+				ACB6F5371C8410FC000B3F4C /* SAStatusPhotosView.m */,
+				AC1490AC1C846FE000171072 /* SAStatusPhotoView.h */,
+				AC1490AD1C846FE000171072 /* SAStatusPhotoView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -967,6 +977,7 @@
 				AC16A5DF1C7B4EB200139596 /* UIImageView+HighlightedWebCache.m in Sources */,
 				AC0F86751C7C43B700EFA630 /* SALoadMoreFooter.m in Sources */,
 				AC0E44E51C7AE02D00DCD867 /* UIWindow+Extension.m in Sources */,
+				ACB6F5381C8410FC000B3F4C /* SAStatusPhotosView.m in Sources */,
 				AC62F8281C75EC1B00428D1F /* AppDelegate.m in Sources */,
 				AC0EEFED1C7A097800512949 /* AFSecurityPolicy.m in Sources */,
 				AC2242281C7EE56300464561 /* MJMethod.m in Sources */,
@@ -1003,6 +1014,7 @@
 				AC0EEFD21C79EEA800512949 /* SAOAuthViewController.m in Sources */,
 				AC0F9DE51C7BEC8B00DD4B18 /* SAUser.m in Sources */,
 				AC0EEFEC1C7A097800512949 /* AFNetworkReachabilityManager.m in Sources */,
+				AC1490AE1C846FE000171072 /* SAStatusPhotoView.m in Sources */,
 				AC0EEFF01C7A097800512949 /* AFURLResponseSerialization.m in Sources */,
 				AC16A5DB1C7B4EB200139596 /* UIButton+WebCache.m in Sources */,
 				AC16A5D71C7B4EB200139596 /* SDWebImageDownloader.m in Sources */,

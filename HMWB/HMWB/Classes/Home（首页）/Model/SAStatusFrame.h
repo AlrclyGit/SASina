@@ -26,6 +26,7 @@
 #define SAStatusCellBorderW 10
 
 
+
 @class SAStatus;
 
 @interface SAStatusFrame : NSObject
@@ -43,7 +44,7 @@
 /** 头像*/
 @property (nonatomic , assign) CGRect iconViewF;
 /** 配图*/
-@property (nonatomic , assign) CGRect photoViewF;
+@property (nonatomic , assign) CGRect photosViewF;
 /** 会员图标*/
 @property (nonatomic , assign) CGRect vipViewF;
 /** 名字*/
@@ -61,7 +62,7 @@
 /** 转发微博正方 + 昵称*/
 @property (nonatomic , assign) CGRect retweetContentLabelF;
 /** 转发配图*/
-@property (nonatomic , assign) CGRect retweetPhotoViewF;
+@property (nonatomic , assign) CGRect retweetPhotosViewF;
 
 
 /** 底部工具条*/
