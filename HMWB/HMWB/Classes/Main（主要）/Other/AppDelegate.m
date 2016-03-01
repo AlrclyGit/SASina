@@ -62,7 +62,7 @@
     
     
     //向操作系统申请后台运行的资格，能维持多久，是不确定的
-    UIBackgroundTaskIdentifier task =  [application beginBackgroundTaskWithExpirationHandler:^{
+    __block UIBackgroundTaskIdentifier task =  [application beginBackgroundTaskWithExpirationHandler:^{
         //当申请的后台运行时间已经结束（过期），就会调用这个Block
         
         //赶紧结束任务

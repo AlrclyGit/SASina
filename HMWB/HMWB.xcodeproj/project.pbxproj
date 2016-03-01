@@ -86,6 +86,7 @@
 		ACBB0D0D1C72D5E9007C128C /* HMWBTests.m in Sources */ = {isa = PBXBuildFile; fileRef = ACBB0D0C1C72D5E9007C128C /* HMWBTests.m */; };
 		ACBB0D181C72D5E9007C128C /* HMWBUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = ACBB0D171C72D5E9007C128C /* HMWBUITests.m */; };
 		ACCCD42A1C7D8A2B00D08359 /* SAStatusFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = ACCCD4291C7D8A2B00D08359 /* SAStatusFrame.m */; };
+		ACE5FFE01C85199D00B99BE5 /* SAIconView.m in Sources */ = {isa = PBXBuildFile; fileRef = ACE5FFDF1C85199D00B99BE5 /* SAIconView.m */; };
 		ACF2709D1C7861E300191C53 /* SADiscoverViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ACF2709C1C7861E300191C53 /* SADiscoverViewController.m */; };
 		ACF270A51C7893BE00191C53 /* SANewfeatureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ACF270A41C7893BE00191C53 /* SANewfeatureViewController.m */; };
 		ACF5880E1C7AF1CE0069CDB5 /* Foundation+Log.m in Sources */ = {isa = PBXBuildFile; fileRef = ACF5880D1C7AF1CE0069CDB5 /* Foundation+Log.m */; };
@@ -267,6 +268,8 @@
 		ACBB0D191C72D5E9007C128C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		ACCCD4281C7D8A2B00D08359 /* SAStatusFrame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SAStatusFrame.h; sourceTree = "<group>"; };
 		ACCCD4291C7D8A2B00D08359 /* SAStatusFrame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SAStatusFrame.m; sourceTree = "<group>"; };
+		ACE5FFDE1C85199D00B99BE5 /* SAIconView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SAIconView.h; sourceTree = "<group>"; };
+		ACE5FFDF1C85199D00B99BE5 /* SAIconView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SAIconView.m; sourceTree = "<group>"; };
 		ACF2709B1C7861E300191C53 /* SADiscoverViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SADiscoverViewController.h; sourceTree = "<group>"; };
 		ACF2709C1C7861E300191C53 /* SADiscoverViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SADiscoverViewController.m; sourceTree = "<group>"; };
 		ACF270A31C7893BE00191C53 /* SANewfeatureViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SANewfeatureViewController.h; sourceTree = "<group>"; };
@@ -587,6 +590,8 @@
 				AC62F8321C75EC6500428D1F /* SADropdownMenu.m */,
 				ACB1A5911C770BE50045BE22 /* SATabBar.h */,
 				ACB1A5921C770BE50045BE22 /* SATabBar.m */,
+				ACE5FFDE1C85199D00B99BE5 /* SAIconView.h */,
+				ACE5FFDF1C85199D00B99BE5 /* SAIconView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -987,6 +992,7 @@
 				AC0F9DE81C7BECB600DD4B18 /* SAStatus.m in Sources */,
 				AC16A5D51C7B4EB200139596 /* SDWebImageCompat.m in Sources */,
 				AC0EEFE91C7A097800512949 /* AFHTTPRequestOperation.m in Sources */,
+				ACE5FFE01C85199D00B99BE5 /* SAIconView.m in Sources */,
 				AC62F82C1C75EC1B00428D1F /* SAProfileViewController.m in Sources */,
 				AC62F8291C75EC1B00428D1F /* SASearchBar.m in Sources */,
 				AC6BFAE31C7AC74E002E83F9 /* MBProgressHUD.m in Sources */,

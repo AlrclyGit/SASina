@@ -14,13 +14,14 @@
 #import "SAPhoto.h"
 #import "SAStatusToolBar.h"
 #import "SAStatusPhotosView.h"
+#import "SAIconView.h"
 
 @interface SAStatusCell()
 
 /** 原创微博整体 */
 @property (nonatomic , weak) UIView *orginalView;
 /** 头像*/
-@property (nonatomic , weak) UIImageView * iconView;
+@property (nonatomic , weak) SAIconView * iconView;
 /** 配图*/
 @property (nonatomic , weak) SAStatusPhotosView * photosView;
 /** 会员图标*/
@@ -106,7 +107,7 @@
     [self.contentView addSubview:orginalView];
     
     /** 头像*/
-    UIImageView * iconView = [[UIImageView alloc]init];
+    SAIconView * iconView = [[SAIconView alloc]init];
     self.iconView = iconView;
     [self.orginalView addSubview:iconView];
     
@@ -199,7 +200,7 @@
     
     /** 头像*/
     self.iconView.frame = statusFrame.iconViewF;
-    [self.iconView sd_setImageWithURL:[NSURL URLWithString: user.profile_image_url] placeholderImage:[UIImage imageNamed:@"avatar_default_small"]];
+    self.iconView.user = user;
   
     /** 会员图标*/
     if (user.isVip) {
