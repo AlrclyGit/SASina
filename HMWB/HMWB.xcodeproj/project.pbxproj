@@ -40,6 +40,8 @@
 		AC16A5DF1C7B4EB200139596 /* UIImageView+HighlightedWebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = AC16A5CD1C7B4EB200139596 /* UIImageView+HighlightedWebCache.m */; };
 		AC16A5E01C7B4EB200139596 /* UIImageView+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = AC16A5CF1C7B4EB200139596 /* UIImageView+WebCache.m */; };
 		AC16A5E11C7B4EB200139596 /* UIView+WebCacheOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = AC16A5D11C7B4EB200139596 /* UIView+WebCacheOperation.m */; };
+		AC20D0DD1C86A9BB00823AE9 /* SAComposeToolbar.m in Sources */ = {isa = PBXBuildFile; fileRef = AC20D0DC1C86A9BB00823AE9 /* SAComposeToolbar.m */; };
+		AC20D0E61C87260200823AE9 /* SAComposePhotosView.m in Sources */ = {isa = PBXBuildFile; fileRef = AC20D0E51C87260200823AE9 /* SAComposePhotosView.m */; };
 		AC22420A1C7EE38E00464561 /* SAPhoto.m in Sources */ = {isa = PBXBuildFile; fileRef = AC2242091C7EE38E00464561 /* SAPhoto.m */; };
 		AC2242231C7EE56300464561 /* MJArgument.m in Sources */ = {isa = PBXBuildFile; fileRef = AC22420D1C7EE56300464561 /* MJArgument.m */; };
 		AC2242241C7EE56300464561 /* MJConst.m in Sources */ = {isa = PBXBuildFile; fileRef = AC22420F1C7EE56300464561 /* MJConst.m */; };
@@ -52,6 +54,7 @@
 		AC22422B1C7EE56300464561 /* NSObject+MJCoding.m in Sources */ = {isa = PBXBuildFile; fileRef = AC22421E1C7EE56300464561 /* NSObject+MJCoding.m */; };
 		AC22422C1C7EE56300464561 /* NSObject+MJKeyValue.m in Sources */ = {isa = PBXBuildFile; fileRef = AC2242201C7EE56300464561 /* NSObject+MJKeyValue.m */; };
 		AC22422D1C7EE56300464561 /* NSObject+MJMember.m in Sources */ = {isa = PBXBuildFile; fileRef = AC2242221C7EE56300464561 /* NSObject+MJMember.m */; };
+		AC44B6611C857D1800F8679D /* SATextView.m in Sources */ = {isa = PBXBuildFile; fileRef = AC44B6601C857D1800F8679D /* SATextView.m */; };
 		AC62F8211C75EC1B00428D1F /* SAHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AC62F7F01C75EC1B00428D1F /* SAHomeViewController.m */; };
 		AC62F8221C75EC1B00428D1F /* UIBarButtonItem+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = AC62F7F61C75EC1B00428D1F /* UIBarButtonItem+Extension.m */; };
 		AC62F8231C75EC1B00428D1F /* UIColor+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = AC62F7F81C75EC1B00428D1F /* UIColor+Extension.m */; };
@@ -86,6 +89,7 @@
 		ACBB0D0D1C72D5E9007C128C /* HMWBTests.m in Sources */ = {isa = PBXBuildFile; fileRef = ACBB0D0C1C72D5E9007C128C /* HMWBTests.m */; };
 		ACBB0D181C72D5E9007C128C /* HMWBUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = ACBB0D171C72D5E9007C128C /* HMWBUITests.m */; };
 		ACCCD42A1C7D8A2B00D08359 /* SAStatusFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = ACCCD4291C7D8A2B00D08359 /* SAStatusFrame.m */; };
+		ACE500371C85392D00B99BE5 /* SAComposeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ACE500361C85392D00B99BE5 /* SAComposeViewController.m */; };
 		ACE5FFE01C85199D00B99BE5 /* SAIconView.m in Sources */ = {isa = PBXBuildFile; fileRef = ACE5FFDF1C85199D00B99BE5 /* SAIconView.m */; };
 		ACF2709D1C7861E300191C53 /* SADiscoverViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ACF2709C1C7861E300191C53 /* SADiscoverViewController.m */; };
 		ACF270A51C7893BE00191C53 /* SANewfeatureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ACF270A41C7893BE00191C53 /* SANewfeatureViewController.m */; };
@@ -177,6 +181,10 @@
 		AC16A5CF1C7B4EB200139596 /* UIImageView+WebCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+WebCache.m"; sourceTree = "<group>"; };
 		AC16A5D01C7B4EB200139596 /* UIView+WebCacheOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+WebCacheOperation.h"; sourceTree = "<group>"; };
 		AC16A5D11C7B4EB200139596 /* UIView+WebCacheOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+WebCacheOperation.m"; sourceTree = "<group>"; };
+		AC20D0DB1C86A9BB00823AE9 /* SAComposeToolbar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SAComposeToolbar.h; sourceTree = "<group>"; };
+		AC20D0DC1C86A9BB00823AE9 /* SAComposeToolbar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SAComposeToolbar.m; sourceTree = "<group>"; };
+		AC20D0E41C87260200823AE9 /* SAComposePhotosView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SAComposePhotosView.h; sourceTree = "<group>"; };
+		AC20D0E51C87260200823AE9 /* SAComposePhotosView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SAComposePhotosView.m; sourceTree = "<group>"; };
 		AC2242081C7EE38E00464561 /* SAPhoto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SAPhoto.h; sourceTree = "<group>"; };
 		AC2242091C7EE38E00464561 /* SAPhoto.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SAPhoto.m; sourceTree = "<group>"; };
 		AC22420C1C7EE56300464561 /* MJArgument.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJArgument.h; sourceTree = "<group>"; };
@@ -202,6 +210,8 @@
 		AC2242201C7EE56300464561 /* NSObject+MJKeyValue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+MJKeyValue.m"; sourceTree = "<group>"; };
 		AC2242211C7EE56300464561 /* NSObject+MJMember.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+MJMember.h"; sourceTree = "<group>"; };
 		AC2242221C7EE56300464561 /* NSObject+MJMember.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+MJMember.m"; sourceTree = "<group>"; };
+		AC44B65F1C857D1800F8679D /* SATextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SATextView.h; sourceTree = "<group>"; };
+		AC44B6601C857D1800F8679D /* SATextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SATextView.m; sourceTree = "<group>"; };
 		AC62F7EF1C75EC1B00428D1F /* SAHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SAHomeViewController.h; sourceTree = "<group>"; };
 		AC62F7F01C75EC1B00428D1F /* SAHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SAHomeViewController.m; sourceTree = "<group>"; };
 		AC62F7F51C75EC1B00428D1F /* UIBarButtonItem+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+Extension.h"; sourceTree = "<group>"; };
@@ -268,6 +278,8 @@
 		ACBB0D191C72D5E9007C128C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		ACCCD4281C7D8A2B00D08359 /* SAStatusFrame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SAStatusFrame.h; sourceTree = "<group>"; };
 		ACCCD4291C7D8A2B00D08359 /* SAStatusFrame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SAStatusFrame.m; sourceTree = "<group>"; };
+		ACE500351C85392D00B99BE5 /* SAComposeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SAComposeViewController.h; sourceTree = "<group>"; };
+		ACE500361C85392D00B99BE5 /* SAComposeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SAComposeViewController.m; sourceTree = "<group>"; };
 		ACE5FFDE1C85199D00B99BE5 /* SAIconView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SAIconView.h; sourceTree = "<group>"; };
 		ACE5FFDF1C85199D00B99BE5 /* SAIconView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SAIconView.m; sourceTree = "<group>"; };
 		ACF2709B1C7861E300191C53 /* SADiscoverViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SADiscoverViewController.h; sourceTree = "<group>"; };
@@ -387,6 +399,17 @@
 				AC16A5D11C7B4EB200139596 /* UIView+WebCacheOperation.m */,
 			);
 			path = SDWebImage;
+			sourceTree = "<group>";
+		};
+		AC20D0DA1C86A97400823AE9 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				AC20D0DB1C86A9BB00823AE9 /* SAComposeToolbar.h */,
+				AC20D0DC1C86A9BB00823AE9 /* SAComposeToolbar.m */,
+				AC20D0E41C87260200823AE9 /* SAComposePhotosView.h */,
+				AC20D0E51C87260200823AE9 /* SAComposePhotosView.m */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		AC22420B1C7EE56300464561 /* MJExtension */ = {
@@ -592,6 +615,8 @@
 				ACB1A5921C770BE50045BE22 /* SATabBar.m */,
 				ACE5FFDE1C85199D00B99BE5 /* SAIconView.h */,
 				ACE5FFDF1C85199D00B99BE5 /* SAIconView.m */,
+				AC44B65F1C857D1800F8679D /* SATextView.h */,
+				AC44B6601C857D1800F8679D /* SATextView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -786,6 +811,7 @@
 				AC0EEFCE1C79EE8200512949 /* OAuth（授权） */,
 				ACF2709E1C78909400191C53 /* Newfeature（新特性） */,
 				AC62F7F31C75EC1B00428D1F /* Main（主要） */,
+				ACE500331C8538BE00B99BE5 /* Compose（发微博） */,
 				AC62F7ED1C75EC1B00428D1F /* Home（首页） */,
 				AC62F80A1C75EC1B00428D1F /* Message（消息） */,
 				AC62F7E91C75EC1B00428D1F /* Discover（发现） */,
@@ -793,6 +819,24 @@
 				AC62F8181C75EC1B00428D1F /* Temp（临时） */,
 			);
 			path = Classes;
+			sourceTree = "<group>";
+		};
+		ACE500331C8538BE00B99BE5 /* Compose（发微博） */ = {
+			isa = PBXGroup;
+			children = (
+				AC20D0DA1C86A97400823AE9 /* View */,
+				ACE500341C8538F200B99BE5 /* Controller */,
+			);
+			path = "Compose（发微博）";
+			sourceTree = "<group>";
+		};
+		ACE500341C8538F200B99BE5 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				ACE500351C85392D00B99BE5 /* SAComposeViewController.h */,
+				ACE500361C85392D00B99BE5 /* SAComposeViewController.m */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 		ACF2709E1C78909400191C53 /* Newfeature（新特性） */ = {
@@ -977,8 +1021,10 @@
 				AC62F8241C75EC1B00428D1F /* UIImage+Extension.m in Sources */,
 				AC16A5DD1C7B4EB200139596 /* UIImage+MultiFormat.m in Sources */,
 				AC22422C1C7EE56300464561 /* NSObject+MJKeyValue.m in Sources */,
+				AC44B6611C857D1800F8679D /* SATextView.m in Sources */,
 				AC731B9A1C8040A60003C142 /* SAStatusToolBar.m in Sources */,
 				ACCCD42A1C7D8A2B00D08359 /* SAStatusFrame.m in Sources */,
+				ACE500371C85392D00B99BE5 /* SAComposeViewController.m in Sources */,
 				AC16A5DF1C7B4EB200139596 /* UIImageView+HighlightedWebCache.m in Sources */,
 				AC0F86751C7C43B700EFA630 /* SALoadMoreFooter.m in Sources */,
 				AC0E44E51C7AE02D00DCD867 /* UIWindow+Extension.m in Sources */,
@@ -1008,6 +1054,7 @@
 				AC62F8361C760A7100428D1F /* SATitleMenuViewController.m in Sources */,
 				AC62F8211C75EC1B00428D1F /* SAHomeViewController.m in Sources */,
 				AC16A5E01C7B4EB200139596 /* UIImageView+WebCache.m in Sources */,
+				AC20D0DD1C86A9BB00823AE9 /* SAComposeToolbar.m in Sources */,
 				AC0EEFEA1C7A097800512949 /* AFHTTPRequestOperationManager.m in Sources */,
 				AC731B9D1C8041100003C142 /* SAStatusCell.m in Sources */,
 				AC16A5E11C7B4EB200139596 /* UIView+WebCacheOperation.m in Sources */,
@@ -1024,6 +1071,7 @@
 				AC0EEFF01C7A097800512949 /* AFURLResponseSerialization.m in Sources */,
 				AC16A5DB1C7B4EB200139596 /* UIButton+WebCache.m in Sources */,
 				AC16A5D71C7B4EB200139596 /* SDWebImageDownloader.m in Sources */,
+				AC20D0E61C87260200823AE9 /* SAComposePhotosView.m in Sources */,
 				AC62F82B1C75EC1B00428D1F /* SAMessageCenterViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

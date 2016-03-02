@@ -13,6 +13,7 @@
 #import "SAProfileViewController.h"
 #import "SANavigationController.h"
 #import "SATabBar.h"
+#import "SAComposeViewController.h"
 
 @interface SAMainViewController () <SATabBarDelegate>
 
@@ -84,9 +85,9 @@
 
 //点击中间按钮时调用
 - (void)tabBarDidClickPlusButton:(SATabBar *)tabBar{
-    UIViewController *vc = [[UIViewController alloc] init];
-    vc.view.backgroundColor = [UIColor colorRandom];
-    [self presentViewController:vc animated:YES completion:nil];
+    SAComposeViewController *compose  = [[SAComposeViewController alloc]init];
+    SANavigationController *nav = [[SANavigationController alloc] initWithRootViewController:compose];
+    [self presentViewController:nav animated:YES completion:nil];
 }
 
 @end
