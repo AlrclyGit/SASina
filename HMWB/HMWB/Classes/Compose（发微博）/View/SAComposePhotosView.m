@@ -8,7 +8,20 @@
 
 #import "SAComposePhotosView.h"
 
+@interface SAComposePhotosView()
+@property (nonatomic, strong) NSMutableArray *addedPhotos;
+@end
+
+
 @implementation SAComposePhotosView
+
+- (NSMutableArray *)addedPhotos{
+    if (_addedPhotos == nil) {
+        _addedPhotos = [[NSMutableArray alloc]init];
+    }
+    return _addedPhotos;
+}
+
 
 - (id)initWithFrame:(CGRect)frame{
     self = [super initWithFrame:frame];
@@ -18,11 +31,16 @@
     return self;
 }
 
+
 - (void)addPhoto:(UIImage *)photo{
     UIImageView *photoView = [[UIImageView alloc] init];
     photoView.image = photo;
     [self addSubview:photoView];
+    
+    //存储图片
+    [self.addedPhotos addObject:photo];
 }
+
 
 - (void)layoutSubviews{
     [super layoutSubviews];
@@ -38,14 +56,24 @@
         UIImageView *photoView = self.subviews[i];
         
         long cols =  i % maxCol;
-        photoView.x =  cols * (imageWH + imageMargin);
+        photoView.x =  imageMargin + cols * (imageWH + imageMargin);
         
         long rows =  i / maxCol;
-        photoView.y =  rows * (imageWH + imageMargin);
+        photoView.y =  imageMargin + rows * (imageWH + imageMargin);
         
         photoView.width = imageWH;
         photoView.height = imageWH;
     }
 
 }
+
+- (NSArray *)photos{
+//    NSMutableArray *photos = [NSMutableArray array];
+//    for (UIImageView *imageView in self.subviews) {
+//        [photos addObject:imageView.image];
+//    }
+    return self.addedPhotos;
+}
+
+
 @end

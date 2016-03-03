@@ -127,9 +127,6 @@
     [self.view addSubview:textView];
     _textView = textView;
     
-    // 成为第一响应者(能输入文本的控件一旦成为第一响应者，就会叫出相应的键盘
-    [textView becomeFirstResponder];
-    
     //文字改变通知
     [SANotificationCenter addObserver:self selector:@selector(textDidChange) name:UITextViewTextDidChangeNotification object:textView];
     
@@ -146,8 +143,18 @@
     //键盘隐藏就会调用（位置和尺寸）
     //    UIKeyboardDidHideNotification;
     //    UIKeyboardDidShowNotification;
-    
 }
+
+/**
+ * 加载完View后调用
+ */
+- (void)viewDidAppear:(BOOL)animated{
+    [super viewDidAppear:animated];
+    
+    // 成为第一响应者(能输入文本的控件一旦成为第一响应者，就会叫出相应的键盘
+    [self.textView becomeFirstResponder];
+}
+
 
 /**
  * 添加工具条
@@ -216,6 +223,49 @@
  * 监听发送按钮
  */
 - (void)send{
+    
+    if (self.photosView.photos.count) {
+        [self sendWithImage];
+    }
+    else{
+        [self sendWithOutImage];
+    }
+
+    //4.退出弹出界面
+    [self dismissViewControllerAnimated:YES completion:nil];
+    
+}
+
+- (void)sendWithImage{
+    
+    //1.请求管理者
+    AFHTTPRequestOperationManager *mgr = [AFHTTPRequestOperationManager manager];
+    
+    //2.拼接请求参数
+    
+    SAAccount *accout = [SAAccountTool account];
+    NSMutableDictionary *params = [NSMutableDictionary dictionary];
+    params[@"access_token"] = accout.access_token;
+    params[@"status"] = self.textView.text;
+    
+    //3.发送请求
+    [mgr POST:@"https://upload.api.weibo.com/2/statuses/upload.json" parameters:params constructingBodyWithBlock:^(id<AFMultipartFormData> formData) {
+        //拼接文件数据
+        UIImage *image = [self.photosView.photos firstObject];
+        NSData *data = UIImageJPEGRepresentation(image, 1.0);
+        [formData appendPartWithFileData:data name:@"pic" fileName:@"test.jpg" mimeType:@"image/jpeg"];
+        
+    } success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        SALog(@"获取用户名称请求成功");
+        [MBProgressHUD showSuccess:@"发送成功"];
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        SALog(@"获取用户名称请求失败——%@",error);
+        [MBProgressHUD showError:@"发送失败"];
+    }];
+}
+
+- (void)sendWithOutImage{
+    
     //1.请求管理者
     AFHTTPRequestOperationManager *mgr = [AFHTTPRequestOperationManager manager];
     
@@ -228,18 +278,13 @@
     
     //3.发送请求
     [mgr POST:@"https://api.weibo.com/2/statuses/update.json" parameters:params success:^(AFHTTPRequestOperation *operation, NSDictionary *responseObject) {
-        SALog(@"获取用户名称请求成功");
+        SALog(@"获取用户名称请求成功（图片）");
         [MBProgressHUD showSuccess:@"发送成功"];
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-        SALog(@"获取用户名称请求失败——%@",error);
+        SALog(@"获取用户名称请求失败（图片）——%@",error);
         [MBProgressHUD showError:@"发送失败"];
     }];
-    
-    //4.退出弹出界面
-    [self dismissViewControllerAnimated:YES completion:nil];
-    
 }
-
 
 #pragma mark - 代理方法
 
@@ -289,6 +334,7 @@
  *  相册
  */
 - (void)openAlbum{
+    //如果想自己写个图片选择器，得利用AssetsLibrary.framework,利用这个框架可以获得手机上所有相册图片
     [self openImagePickerController:UIImagePickerControllerSourceTypePhotoLibrary];
 }
 
@@ -317,8 +363,6 @@
     
     //添加图片到photoView中
     [self.photosView addPhoto:image];
-    
-    
 }
 
 

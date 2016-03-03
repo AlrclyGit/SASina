@@ -10,4 +10,5 @@
 
 @interface SAComposePhotosView : UIView
 - (void)addPhoto:(UIImage *)photo;
+- (NSArray *)photos;
 @end
