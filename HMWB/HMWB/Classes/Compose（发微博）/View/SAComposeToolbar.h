@@ -25,4 +25,6 @@ typedef enum {
 
 @interface SAComposeToolbar : UIView
 @property (nonatomic, weak) id<SAComposeToolbarDelegate>delegate;
+/** 是否显示表情按钮*/
+@property (nonatomic , assign) BOOL ShowKeyboardButton;
 @end

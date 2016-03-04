@@ -8,8 +8,11 @@
 
 #import "SAComposeToolbar.h"
 
-@implementation SAComposeToolbar
+@interface SAComposeToolbar()
+@property (nonatomic , weak) UIButton * emotionButton;
+@end
 
+@implementation SAComposeToolbar
 
 /**
  * 工具条的初始化方法
@@ -22,21 +25,45 @@
         [self setupBtn:@"compose_toolbar_picture" highImage:@"compose_toolbar_picture_highlighted" type:SAComposeToolbarButtonTypePicture];
         [self setupBtn:@"compose_mentionbutton_background" highImage:@"compose_mentionbutton_background_highlighted" type:SAComposeToolbarButtonTypeMention];
         [self setupBtn:@"compose_trendbutton_background" highImage:@"compose_trendbutton_background_highlighted" type:SAComposeToolbarButtonTypeTrend];
-        [self setupBtn:@"compose_emoticonbutton_background" highImage:@"compose_emoticonbutton_background_highlighted" type:SAComposeToolbarButtonTypeEmotion];
+        self.emotionButton = [self setupBtn:@"compose_emoticonbutton_background" highImage:@"compose_emoticonbutton_background_highlighted" type:SAComposeToolbarButtonTypeEmotion];
     }
     return self;
 }
 
 /**
+ * 键盘工具条最右的按钮
+ */
+-(void)setShowKeyboardButton:(BOOL)showEmotionButton{
+    _ShowKeyboardButton = showEmotionButton;
+    
+    //默认的图片名
+    NSString *image = @"compose_emoticonbutton_background";
+    NSString *highImage = @"compose_emoticonbutton_background_highlighted";
+    
+    //显示键盘图标
+    if (showEmotionButton) {
+        image = @"compose_keyboardbutton_background";
+        highImage = @"compose_keyboardbutton_background_highlighted";
+    }
+    
+    //设置图片
+    [self.emotionButton setImage:[UIImage imageNamed:image] forState:UIControlStateNormal];
+    [self.emotionButton setImage:[UIImage imageNamed:highImage] forState:UIControlStateHighlighted];
+    
+}
+
+/**
  * 创建工具条内一个按钮的方法
  */
-- (void)setupBtn:(NSString *)image highImage:(NSString *)highImage type:(SAComposeToolbarButtonType)type{
+- (UIButton *)setupBtn:(NSString *)image highImage:(NSString *)highImage type:(SAComposeToolbarButtonType)type{
     UIButton *btn = [[UIButton alloc] init];
     [btn setImage:[UIImage imageNamed:image] forState:UIControlStateNormal];
     [btn setImage:[UIImage imageNamed:highImage] forState:UIControlStateHighlighted];
     [btn addTarget:self action:@selector(btnClick:) forControlEvents:UIControlEventTouchUpInside];
     btn.tag = type;
     [self addSubview:btn];
+    
+    return btn;
 }
 
 /**

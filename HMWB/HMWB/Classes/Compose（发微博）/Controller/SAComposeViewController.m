@@ -13,6 +13,8 @@
 #import "MBProgressHUD+MJ.h"
 #import "SAComposeToolbar.h"
 #import "SAComposePhotosView.h"
+#import "SAEmotionKeyboard.h"
+
 
 @interface SAComposeViewController () <UITextViewDelegate , SAComposeToolbarDelegate , UINavigationControllerDelegate, UIImagePickerControllerDelegate>
 /** 输入控件*/
@@ -21,11 +23,23 @@
 @property (nonatomic , weak) SAComposeToolbar * toolBar;
 /** 相册（存放选中的图片）*/
 @property (nonatomic , weak) SAComposePhotosView * photosView;
+/** 表情键盘*/
+@property (nonatomic , strong) SAEmotionKeyboard * emotionkeyboard;
+/** 是否正在切换键盘*/
+@property (nonatomic , assign) BOOL switchingKeybaord;
 @end
 
 
 
 @implementation SAComposeViewController
+
+#pragma mark - 懒加载方法
+- (SAEmotionKeyboard *)emotionkeyboard{
+    if (_emotionkeyboard == nil) {
+        _emotionkeyboard = [[SAEmotionKeyboard alloc]init];
+    }
+    return _emotionkeyboard;
+}
 
 #pragma mark - 系统方法
 
@@ -121,7 +135,7 @@
     textView.font = [UIFont systemFontOfSize:15];
     textView.delegate = self;
     textView.placeholder = @"分享你的新鲜事...";
-    
+
     
     //textView.placeholderColor = [UIColor redColor];
     [self.view addSubview:textView];
@@ -190,8 +204,11 @@
      UIKeyboardAnimationCurveUserInfoKey,
      */
     
+    if (self.switchingKeybaord) return;
+    
     //取出包含键盘的字典
     NSDictionary *userInfo = notification.userInfo;
+    
     //键盘弹出\隐藏所费的时间
     double duration = [userInfo[UIKeyboardAnimationDurationUserInfoKey] doubleValue];//因为是包装过的，所以用Value转回来。
     //键盘弹出后的Frame
@@ -289,6 +306,19 @@
 #pragma mark - 代理方法
 
 /**
+ * imagePickerController选择完图片后调用（拍照完毕或选择相册图片完毕）
+ */
+- (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary<NSString *,id> *)info{
+    //选择完图片返回原控制器
+    [picker dismissViewControllerAnimated:YES completion:nil];
+    
+    UIImage *image = info[UIImagePickerControllerOriginalImage];
+    
+    //添加图片到photoView中
+    [self.photosView addPhoto:image];
+}
+
+/**
  * UITextViewDelegate代理方法
  */
 - (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView{
@@ -313,7 +343,7 @@
             //#
             break;
         case SAComposeToolbarButtonTypeEmotion:
-            //表情/键盘
+            [self switchKeyboard]; //表情/键盘
             break;
     }
 }
@@ -350,20 +380,42 @@
     [self presentViewController:ipc animated:YES completion:nil ];
 }
 
-#pragma mark - UIImagePickerControllerDelegate代理方法
-
 /**
- * imagePickerController选择完图片后调用（拍照完毕或选择相册图片完毕）
+ * 切换键盘
  */
-- (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary<NSString *,id> *)info{
-    //选择完图片返回原控制器
-    [picker dismissViewControllerAnimated:YES completion:nil];
+- (void)switchKeyboard{
+
+    if (self.textView.inputView == nil ) {//系统键盘
+        self.emotionkeyboard.width = self.view.width;
+        self.emotionkeyboard.height = 258;
+        [self.emotionkeyboard setNeedsLayout];
+        self.textView.inputView = self.emotionkeyboard;
+        self.toolBar.ShowKeyboardButton = YES;
+    }
+    else{//表情键盘
+        self.textView.inputView = nil;
+        self.toolBar.ShowKeyboardButton = NO;
+    }
     
-    UIImage *image = info[UIImagePickerControllerOriginalImage];
-    
-    //添加图片到photoView中
-    [self.photosView addPhoto:image];
+    //开始切换键盘
+    self.switchingKeybaord = YES;
+
+    //退出键盘
+    [self.textView endEditing:YES];
+
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        //弹出键盘
+        [self.textView becomeFirstResponder];
+        
+        //结束
+        self.switchingKeybaord = NO;
+    });
+ 
 }
+
+
+
+
 
 
 
