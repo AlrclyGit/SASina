@@ -106,7 +106,6 @@
     AFHTTPRequestOperationManager *mgr = [AFHTTPRequestOperationManager manager];
     
     //2.拼接请求参数
-    
     SAAccount *accout = [SAAccountTool account];
     NSMutableDictionary *params = [NSMutableDictionary dictionary];
     params[@"access_token"] = accout.access_token;

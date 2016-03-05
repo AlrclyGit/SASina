@@ -30,7 +30,6 @@
 - (SAEmotionListView *)recentListView{
     if (_recentListView == nil) {
         _recentListView = [[SAEmotionListView alloc]init];
-        _recentListView.backgroundColor = [UIColor colorRandom];
     }
     return _recentListView;
 }
@@ -40,7 +39,6 @@
         _defauListView = [[SAEmotionListView alloc]init];
         NSString *path = [[NSBundle mainBundle] pathForResource:@"EmotionIcons/default/info.plist" ofType:nil];
         _defauListView.emotions = [SAEmotion objectArrayWithKeyValuesArray:[NSArray arrayWithContentsOfFile:path]];
-        _defauListView.backgroundColor = [UIColor colorRandom];
     }
     return _defauListView;
 }
@@ -50,7 +48,6 @@
         _emojiListView = [[SAEmotionListView alloc]init];
         NSString *path = [[NSBundle mainBundle] pathForResource:@"EmotionIcons/emoji/info.plist" ofType:nil];
         _emojiListView.emotions = [SAEmotion objectArrayWithKeyValuesArray:[NSArray arrayWithContentsOfFile:path]];
-        _emojiListView.backgroundColor = [UIColor colorRandom];
     }
     return _emojiListView;
 }
@@ -60,7 +57,6 @@
         _lxhListView = [[SAEmotionListView alloc]init];
         NSString *path = [[NSBundle mainBundle] pathForResource:@"EmotionIcons/lxh/info.plist" ofType:nil];
         _lxhListView.emotions = [SAEmotion objectArrayWithKeyValuesArray:[NSArray arrayWithContentsOfFile:path]];
-        _lxhListView.backgroundColor = [UIColor colorRandom];
     }
     return _lxhListView;
 }
@@ -81,19 +77,12 @@
         tabBar.delegate = self;
         [self addSubview:tabBar];
         _tabBar =tabBar;
-    
     }
     return self;
 }
 
 - (void)layoutSubviews{
     [super layoutSubviews];
- 
-    //1.表情内容
-    self.contentView.x = 0;
-    self.contentView.y = 0;
-    self.contentView.width = self.width;
-    self.contentView.height = self.tabBar.y;
     
     //2.表情底部
     self.tabBar.x = 0;
@@ -101,9 +90,15 @@
     self.tabBar.height = 37;
     self.tabBar.width = self.width;
    
+    //1.表情内容
+    self.contentView.x = 0;
+    self.contentView.y = 0;
+    self.contentView.width = self.width;
+    self.contentView.height = self.tabBar.y;
+    
     UIView *child =  [self.contentView.subviews  lastObject];
     child.frame = self.contentView.bounds;
-    
+
 }
 
 //按钮点击代理
@@ -115,25 +110,25 @@
         case SAEmotionTabBarButtonTypeRecent:{//最近
             [self.contentView addSubview:self.recentListView];
             
-            SALog(@"Recent");
+            SALog(@"最近");
             break;
         }
             
         case SAEmotionTabBarButtonTypeDegfault:{//默认
               [self.contentView addSubview:self.defauListView];
-            SALog(@"defaultEomtions");
+            SALog(@"默认");
             break;
         }
 
         case SAEmotionTabBarButtonTypeEmoji:{//Emoji
             [self.contentView addSubview:self.emojiListView];
-            SALog(@"emojiEomtions");
+            SALog(@"Emoji");
             break;
         }
   
         case SAEmotionTabBarButtonTypeLXH:{//浪小花
             [self.contentView addSubview:self.lxhListView];
-            SALog(@"lxhEomtions");
+            SALog(@"浪小花");
             break;
         }
     }

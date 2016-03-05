@@ -34,9 +34,11 @@
 @implementation SAComposeViewController
 
 #pragma mark - 懒加载方法
-- (SAEmotionKeyboard *)emotionkeyboard{
+- (SAEmotionKeyboard *)emotionkeyboard {
     if (_emotionkeyboard == nil) {
         _emotionkeyboard = [[SAEmotionKeyboard alloc]init];
+        _emotionkeyboard.width = self.view.width;
+        _emotionkeyboard.height = 258;
     }
     return _emotionkeyboard;
 }
@@ -386,9 +388,6 @@
 - (void)switchKeyboard{
 
     if (self.textView.inputView == nil ) {//系统键盘
-        self.emotionkeyboard.width = self.view.width;
-        self.emotionkeyboard.height = 258;
-        [self.emotionkeyboard setNeedsLayout];
         self.textView.inputView = self.emotionkeyboard;
         self.toolBar.ShowKeyboardButton = YES;
     }

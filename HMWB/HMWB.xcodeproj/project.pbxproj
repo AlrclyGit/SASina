@@ -101,6 +101,8 @@
 		ACF270A51C7893BE00191C53 /* SANewfeatureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ACF270A41C7893BE00191C53 /* SANewfeatureViewController.m */; };
 		ACF5880E1C7AF1CE0069CDB5 /* Foundation+Log.m in Sources */ = {isa = PBXBuildFile; fileRef = ACF5880D1C7AF1CE0069CDB5 /* Foundation+Log.m */; };
 		ACF588141C7B1C720069CDB5 /* SATitleButton.m in Sources */ = {isa = PBXBuildFile; fileRef = ACF588131C7B1C720069CDB5 /* SATitleButton.m */; };
+		ACFB2C6B1C8ACD6E00FE9751 /* SAEmotionPageView.m in Sources */ = {isa = PBXBuildFile; fileRef = ACFB2C6A1C8ACD6E00FE9751 /* SAEmotionPageView.m */; };
+		ACFB2C6E1C8ADACE00FE9751 /* NSString+Emoji.m in Sources */ = {isa = PBXBuildFile; fileRef = ACFB2C6D1C8ADACE00FE9751 /* NSString+Emoji.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -306,6 +308,10 @@
 		ACF5880D1C7AF1CE0069CDB5 /* Foundation+Log.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Foundation+Log.m"; sourceTree = "<group>"; };
 		ACF588121C7B1C720069CDB5 /* SATitleButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SATitleButton.h; sourceTree = "<group>"; };
 		ACF588131C7B1C720069CDB5 /* SATitleButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SATitleButton.m; sourceTree = "<group>"; };
+		ACFB2C691C8ACD6E00FE9751 /* SAEmotionPageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SAEmotionPageView.h; sourceTree = "<group>"; };
+		ACFB2C6A1C8ACD6E00FE9751 /* SAEmotionPageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SAEmotionPageView.m; sourceTree = "<group>"; };
+		ACFB2C6C1C8ADACE00FE9751 /* NSString+Emoji.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Emoji.h"; sourceTree = "<group>"; };
+		ACFB2C6D1C8ADACE00FE9751 /* NSString+Emoji.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Emoji.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -429,6 +435,8 @@
 				ACD818031C88242400A1F159 /* SAEmotionKeyboard.m */,
 				ACD8180B1C88276700A1F159 /* SAEmotionListView.h */,
 				ACD8180C1C88276700A1F159 /* SAEmotionListView.m */,
+				ACFB2C691C8ACD6E00FE9751 /* SAEmotionPageView.h */,
+				ACFB2C6A1C8ACD6E00FE9751 /* SAEmotionPageView.m */,
 				ACD818051C88261A00A1F159 /* SAEmotionTabBar.h */,
 				ACD818061C88261A00A1F159 /* SAEmotionTabBar.m */,
 				AC3065C61C886C1700672176 /* SAEmotionTabBarButton.h */,
@@ -572,6 +580,8 @@
 		AC62F7F41C75EC1B00428D1F /* Category */ = {
 			isa = PBXGroup;
 			children = (
+				ACFB2C6C1C8ADACE00FE9751 /* NSString+Emoji.h */,
+				ACFB2C6D1C8ADACE00FE9751 /* NSString+Emoji.m */,
 				ACF5880D1C7AF1CE0069CDB5 /* Foundation+Log.m */,
 				AC62F7F51C75EC1B00428D1F /* UIBarButtonItem+Extension.h */,
 				AC62F7F61C75EC1B00428D1F /* UIBarButtonItem+Extension.m */,
@@ -1087,6 +1097,7 @@
 				AC62F8221C75EC1B00428D1F /* UIBarButtonItem+Extension.m in Sources */,
 				ACF588141C7B1C720069CDB5 /* SATitleButton.m in Sources */,
 				ACF270A51C7893BE00191C53 /* SANewfeatureViewController.m in Sources */,
+				ACFB2C6E1C8ADACE00FE9751 /* NSString+Emoji.m in Sources */,
 				AC62F82D1C75EC1B00428D1F /* SATest1ViewController.m in Sources */,
 				AC62F8271C75EC1B00428D1F /* SANavigationController.m in Sources */,
 				AC0EEFEB1C7A097800512949 /* AFHTTPSessionManager.m in Sources */,
@@ -1102,6 +1113,7 @@
 				AC62F8261C75EC1B00428D1F /* SAMainViewController.m in Sources */,
 				AC16A5DA1C7B4EB200139596 /* SDWebImagePrefetcher.m in Sources */,
 				AC62F82F1C75EC1B00428D1F /* SATest2ViewController.m in Sources */,
+				ACFB2C6B1C8ACD6E00FE9751 /* SAEmotionPageView.m in Sources */,
 				AC22422B1C7EE56300464561 /* NSObject+MJCoding.m in Sources */,
 				AC16A5D31C7B4EB200139596 /* NSData+ImageContentType.m in Sources */,
 				AC62F8231C75EC1B00428D1F /* UIColor+Extension.m in Sources */,
