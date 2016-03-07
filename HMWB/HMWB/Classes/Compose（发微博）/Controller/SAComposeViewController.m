@@ -14,6 +14,7 @@
 #import "SAComposeToolbar.h"
 #import "SAComposePhotosView.h"
 #import "SAEmotionKeyboard.h"
+#import "SAEmotion.h"
 
 
 @interface SAComposeViewController () <UITextViewDelegate , SAComposeToolbarDelegate , UINavigationControllerDelegate, UIImagePickerControllerDelegate>
@@ -137,6 +138,7 @@
     textView.font = [UIFont systemFontOfSize:15];
     textView.delegate = self;
     textView.placeholder = @"分享你的新鲜事...";
+    //textView.attributedText = ;
 
     
     //textView.placeholderColor = [UIColor redColor];
@@ -149,6 +151,8 @@
     //键盘通知
     [SANotificationCenter addObserver:self selector:@selector(keyboardWillChangeFrame:) name:UIKeyboardWillChangeFrameNotification object:nil];
     
+    //表情选中的通知
+    [SANotificationCenter addObserver:self selector:@selector(emotionDidSelect:) name:@"SAEmotionDidSelectNotification" object:nil];
     
     //键盘的frame发生改变就会调用（位置和尺寸）
     //    UIKeyboardWillChangeFrameNotification;
@@ -192,6 +196,37 @@
 
 
 #pragma mark - 监听方法
+
+- (void)emotionDidSelect:(NSNotification *)notification {
+    SAEmotion *emotion =  notification.userInfo[@"selectedEmotion"];
+    if (emotion.code) {
+        //insertText将文字插入到光标所有的位置
+        [self.textView insertText:emotion.code.emoji];
+    }
+    else if (emotion.png) {
+        //创建一个属性化字符串
+        NSMutableAttributedString *attributedText = [[NSMutableAttributedString alloc] init];
+        //将之前的文字拼接上来
+        [attributedText appendAttributedString:self.textView.attributedText];
+        //创建一个属性化字符串的附件
+        NSTextAttachment *attch = [[NSTextAttachment alloc] init];
+        //设置附件的图片
+        attch.image = [UIImage imageNamed:emotion.png];
+        //获得高行
+        CGFloat attchWH = self.textView.font.lineHeight;
+        //设置附件的尺寸
+        attch.bounds = CGRectMake(0, -3, attchWH, attchWH);
+        //将附件装入属性化字符串
+        NSAttributedString *imageStr = [NSAttributedString attributedStringWithAttachment:attch];
+        //将附件拼接上来
+        [attributedText appendAttributedString:imageStr];
+        //设置属性化字符串的文字大小//属性,价值，范围
+        [attributedText addAttribute:NSFontAttributeName value:self.textView.font range:NSMakeRange(0, attributedText.length)];
+        //设置到文本
+        self.textView.attributedText = attributedText;
+    }
+    
+}
 
 /**
  * 监听键盘改变
@@ -261,7 +296,6 @@
     AFHTTPRequestOperationManager *mgr = [AFHTTPRequestOperationManager manager];
     
     //2.拼接请求参数
-    
     SAAccount *accout = [SAAccountTool account];
     NSMutableDictionary *params = [NSMutableDictionary dictionary];
     params[@"access_token"] = accout.access_token;
@@ -272,6 +306,8 @@
         //拼接文件数据
         UIImage *image = [self.photosView.photos firstObject];
         NSData *data = UIImageJPEGRepresentation(image, 1.0);
+        
+        
         [formData appendPartWithFileData:data name:@"pic" fileName:@"test.jpg" mimeType:@"image/jpeg"];
         
     } success:^(AFHTTPRequestOperation *operation, id responseObject) {
@@ -282,6 +318,7 @@
         [MBProgressHUD showError:@"发送失败"];
     }];
 }
+
 
 - (void)sendWithOutImage{
     

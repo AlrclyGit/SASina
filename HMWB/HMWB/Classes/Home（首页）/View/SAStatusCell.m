@@ -239,7 +239,7 @@
     self.tiemLabel.text = time;
     
     /** 来源*/
-    CGFloat sourceX = CGRectGetMaxX(statusFrame.tiemLabelF) + SAStatusCellBorderW;
+    CGFloat sourceX = CGRectGetMaxX(self.tiemLabel.frame) + SAStatusCellBorderW;
     CGFloat sourceY = timeY;
     CGSize sourceSize = [status.source sizeWithFont:SAStatusCellContentFont];
     self.sourceLabel.frame = (CGRect){{sourceX,sourceY},sourceSize};;

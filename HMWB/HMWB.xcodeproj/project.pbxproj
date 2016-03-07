@@ -56,6 +56,10 @@
 		AC22422D1C7EE56300464561 /* NSObject+MJMember.m in Sources */ = {isa = PBXBuildFile; fileRef = AC2242221C7EE56300464561 /* NSObject+MJMember.m */; };
 		AC3065C81C886C1700672176 /* SAEmotionTabBarButton.m in Sources */ = {isa = PBXBuildFile; fileRef = AC3065C71C886C1700672176 /* SAEmotionTabBarButton.m */; };
 		AC44B6611C857D1800F8679D /* SATextView.m in Sources */ = {isa = PBXBuildFile; fileRef = AC44B6601C857D1800F8679D /* SATextView.m */; };
+		AC543AEA1C8D6A2E0029D6BE /* SAEmotionPopView.m in Sources */ = {isa = PBXBuildFile; fileRef = AC543AE91C8D6A2E0029D6BE /* SAEmotionPopView.m */; };
+		AC543AEC1C8D6ACC0029D6BE /* SAEmotionPopView.xib in Resources */ = {isa = PBXBuildFile; fileRef = AC543AEB1C8D6ACC0029D6BE /* SAEmotionPopView.xib */; };
+		AC543AEE1C8D6B980029D6BE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC543AED1C8D6B980029D6BE /* Assets.xcassets */; };
+		AC543AF11C8D7A510029D6BE /* SAEmotionButton.m in Sources */ = {isa = PBXBuildFile; fileRef = AC543AF01C8D7A510029D6BE /* SAEmotionButton.m */; };
 		AC62F8211C75EC1B00428D1F /* SAHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AC62F7F01C75EC1B00428D1F /* SAHomeViewController.m */; };
 		AC62F8221C75EC1B00428D1F /* UIBarButtonItem+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = AC62F7F61C75EC1B00428D1F /* UIBarButtonItem+Extension.m */; };
 		AC62F8231C75EC1B00428D1F /* UIColor+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = AC62F7F81C75EC1B00428D1F /* UIColor+Extension.m */; };
@@ -87,7 +91,6 @@
 		AC8145871C81D82100F51A55 /* NSString+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = AC8145861C81D82100F51A55 /* NSString+Extension.m */; };
 		ACB1A5931C770BE50045BE22 /* SATabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = ACB1A5921C770BE50045BE22 /* SATabBar.m */; };
 		ACB6F5381C8410FC000B3F4C /* SAStatusPhotosView.m in Sources */ = {isa = PBXBuildFile; fileRef = ACB6F5371C8410FC000B3F4C /* SAStatusPhotosView.m */; };
-		ACBB0CFF1C72D5E9007C128C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ACBB0CFE1C72D5E9007C128C /* Assets.xcassets */; };
 		ACBB0D021C72D5E9007C128C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ACBB0D001C72D5E9007C128C /* LaunchScreen.storyboard */; };
 		ACBB0D0D1C72D5E9007C128C /* HMWBTests.m in Sources */ = {isa = PBXBuildFile; fileRef = ACBB0D0C1C72D5E9007C128C /* HMWBTests.m */; };
 		ACBB0D181C72D5E9007C128C /* HMWBUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = ACBB0D171C72D5E9007C128C /* HMWBUITests.m */; };
@@ -222,6 +225,12 @@
 		AC3065C71C886C1700672176 /* SAEmotionTabBarButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SAEmotionTabBarButton.m; sourceTree = "<group>"; };
 		AC44B65F1C857D1800F8679D /* SATextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SATextView.h; sourceTree = "<group>"; };
 		AC44B6601C857D1800F8679D /* SATextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SATextView.m; sourceTree = "<group>"; };
+		AC543AE81C8D6A2E0029D6BE /* SAEmotionPopView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SAEmotionPopView.h; sourceTree = "<group>"; };
+		AC543AE91C8D6A2E0029D6BE /* SAEmotionPopView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SAEmotionPopView.m; sourceTree = "<group>"; };
+		AC543AEB1C8D6ACC0029D6BE /* SAEmotionPopView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SAEmotionPopView.xib; sourceTree = "<group>"; };
+		AC543AED1C8D6B980029D6BE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		AC543AEF1C8D7A510029D6BE /* SAEmotionButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SAEmotionButton.h; sourceTree = "<group>"; };
+		AC543AF01C8D7A510029D6BE /* SAEmotionButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SAEmotionButton.m; sourceTree = "<group>"; };
 		AC62F7EF1C75EC1B00428D1F /* SAHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SAHomeViewController.h; sourceTree = "<group>"; };
 		AC62F7F01C75EC1B00428D1F /* SAHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SAHomeViewController.m; sourceTree = "<group>"; };
 		AC62F7F51C75EC1B00428D1F /* UIBarButtonItem+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+Extension.h"; sourceTree = "<group>"; };
@@ -281,7 +290,6 @@
 		ACB6F5361C8410FC000B3F4C /* SAStatusPhotosView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SAStatusPhotosView.h; sourceTree = "<group>"; };
 		ACB6F5371C8410FC000B3F4C /* SAStatusPhotosView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SAStatusPhotosView.m; sourceTree = "<group>"; };
 		ACBB0CEF1C72D5E9007C128C /* HMWB.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HMWB.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		ACBB0CFE1C72D5E9007C128C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		ACBB0D011C72D5E9007C128C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		ACBB0D081C72D5E9007C128C /* HMWBTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HMWBTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		ACBB0D0C1C72D5E9007C128C /* HMWBTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HMWBTests.m; sourceTree = "<group>"; };
@@ -437,6 +445,11 @@
 				ACD8180C1C88276700A1F159 /* SAEmotionListView.m */,
 				ACFB2C691C8ACD6E00FE9751 /* SAEmotionPageView.h */,
 				ACFB2C6A1C8ACD6E00FE9751 /* SAEmotionPageView.m */,
+				AC543AEF1C8D7A510029D6BE /* SAEmotionButton.h */,
+				AC543AF01C8D7A510029D6BE /* SAEmotionButton.m */,
+				AC543AE81C8D6A2E0029D6BE /* SAEmotionPopView.h */,
+				AC543AE91C8D6A2E0029D6BE /* SAEmotionPopView.m */,
+				AC543AEB1C8D6ACC0029D6BE /* SAEmotionPopView.xib */,
 				ACD818051C88261A00A1F159 /* SAEmotionTabBar.h */,
 				ACD818061C88261A00A1F159 /* SAEmotionTabBar.m */,
 				AC3065C61C886C1700672176 /* SAEmotionTabBarButton.h */,
@@ -814,7 +827,7 @@
 			isa = PBXGroup;
 			children = (
 				ACBB0D251C72D647007C128C /* Classes */,
-				ACBB0CFE1C72D5E9007C128C /* Assets.xcassets */,
+				AC543AED1C8D6B980029D6BE /* Assets.xcassets */,
 				ACBB0CF21C72D5E9007C128C /* Supporting Files */,
 			);
 			path = HMWB;
@@ -1014,8 +1027,9 @@
 				AC6BFAE21C7AC74E002E83F9 /* MBProgressHUD.bundle in Resources */,
 				AC64666F1C89713100B1468A /* EmotionIcons in Resources */,
 				AC0F86771C7C445000EFA630 /* SALoadMoreFooter.xib in Resources */,
-				ACBB0CFF1C72D5E9007C128C /* Assets.xcassets in Resources */,
+				AC543AEC1C8D6ACC0029D6BE /* SAEmotionPopView.xib in Resources */,
 				AC62F8301C75EC1B00428D1F /* SATest2ViewController.xib in Resources */,
+				AC543AEE1C8D6B980029D6BE /* Assets.xcassets in Resources */,
 				AC0F86791C7C9BCB00EFA630 /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1080,6 +1094,7 @@
 				AC0E44E51C7AE02D00DCD867 /* UIWindow+Extension.m in Sources */,
 				ACB6F5381C8410FC000B3F4C /* SAStatusPhotosView.m in Sources */,
 				AC62F8281C75EC1B00428D1F /* AppDelegate.m in Sources */,
+				AC543AF11C8D7A510029D6BE /* SAEmotionButton.m in Sources */,
 				AC0EEFED1C7A097800512949 /* AFSecurityPolicy.m in Sources */,
 				AC2242281C7EE56300464561 /* MJMethod.m in Sources */,
 				AC22422A1C7EE56300464561 /* MJTypeEncoding.m in Sources */,
@@ -1112,6 +1127,7 @@
 				AC16A5E11C7B4EB200139596 /* UIView+WebCacheOperation.m in Sources */,
 				AC62F8261C75EC1B00428D1F /* SAMainViewController.m in Sources */,
 				AC16A5DA1C7B4EB200139596 /* SDWebImagePrefetcher.m in Sources */,
+				AC543AEA1C8D6A2E0029D6BE /* SAEmotionPopView.m in Sources */,
 				AC62F82F1C75EC1B00428D1F /* SATest2ViewController.m in Sources */,
 				ACFB2C6B1C8ACD6E00FE9751 /* SAEmotionPageView.m in Sources */,
 				AC22422B1C7EE56300464561 /* NSObject+MJCoding.m in Sources */,

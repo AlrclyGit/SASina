@@ -14,7 +14,6 @@
 
 @implementation SAStatusFrame
 
-
 /**
  * 设置Cell的Frame
  */
@@ -54,7 +53,8 @@
     CGFloat timeX = nameX;
     CGFloat timeY = CGRectGetMaxY(self.nameLabelF) + SAStatusCellBorderW;
     CGSize timeSize = [status.created_at sizeWithFont:SAStatusCellTimeFont];
-     self.tiemLabelF = (CGRect){{timeX,timeY},timeSize};
+    self.tiemLabelF = (CGRect){{timeX,timeY},timeSize};
+    
     /** 来源*/
     CGFloat sourceX = CGRectGetMaxX(self.tiemLabelF) + SAStatusCellBorderW;
     CGFloat sourceY = timeY;
