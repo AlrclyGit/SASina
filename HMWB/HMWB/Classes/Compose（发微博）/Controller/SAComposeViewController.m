@@ -8,7 +8,7 @@
 
 #import "SAComposeViewController.h"
 #import "SAAccountTool.h"
-#import "SATextView.h"
+#import "SAEmotionTextView.h"
 #import "AFNetworking.h"
 #import "MBProgressHUD+MJ.h"
 #import "SAComposeToolbar.h"
@@ -19,7 +19,7 @@
 
 @interface SAComposeViewController () <UITextViewDelegate , SAComposeToolbarDelegate , UINavigationControllerDelegate, UIImagePickerControllerDelegate>
 /** 输入控件*/
-@property (nonatomic , weak) SATextView * textView;
+@property (nonatomic , weak) SAEmotionTextView * textView;
 /** 键盘的工具条*/
 @property (nonatomic , weak) SAComposeToolbar * toolBar;
 /** 相册（存放选中的图片）*/
@@ -132,7 +132,7 @@
  * 添加输入控件
  */
 - (void)setupTextView{
-    SATextView *textView = [[SATextView alloc] init];
+    SAEmotionTextView *textView = [[SAEmotionTextView alloc] init];
     textView.alwaysBounceVertical = YES; //垂直方向始终有弹簧效果
     textView.frame = self.view.bounds;
     textView.font = [UIFont systemFontOfSize:15];
@@ -197,35 +197,13 @@
 
 #pragma mark - 监听方法
 
+/**
+ *  表情按钮点击
+ */
 - (void)emotionDidSelect:(NSNotification *)notification {
     SAEmotion *emotion =  notification.userInfo[@"selectedEmotion"];
-    if (emotion.code) {
-        //insertText将文字插入到光标所有的位置
-        [self.textView insertText:emotion.code.emoji];
-    }
-    else if (emotion.png) {
-        //创建一个属性化字符串
-        NSMutableAttributedString *attributedText = [[NSMutableAttributedString alloc] init];
-        //将之前的文字拼接上来
-        [attributedText appendAttributedString:self.textView.attributedText];
-        //创建一个属性化字符串的附件
-        NSTextAttachment *attch = [[NSTextAttachment alloc] init];
-        //设置附件的图片
-        attch.image = [UIImage imageNamed:emotion.png];
-        //获得高行
-        CGFloat attchWH = self.textView.font.lineHeight;
-        //设置附件的尺寸
-        attch.bounds = CGRectMake(0, -3, attchWH, attchWH);
-        //将附件装入属性化字符串
-        NSAttributedString *imageStr = [NSAttributedString attributedStringWithAttachment:attch];
-        //将附件拼接上来
-        [attributedText appendAttributedString:imageStr];
-        //设置属性化字符串的文字大小//属性,价值，范围
-        [attributedText addAttribute:NSFontAttributeName value:self.textView.font range:NSMakeRange(0, attributedText.length)];
-        //设置到文本
-        self.textView.attributedText = attributedText;
-    }
-    
+   
+    [self.textView insertEmotion:emotion];
 }
 
 /**

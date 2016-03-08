@@ -84,6 +84,8 @@
 		AC6BFAE21C7AC74E002E83F9 /* MBProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = AC6BFADE1C7AC74E002E83F9 /* MBProgressHUD.bundle */; };
 		AC6BFAE31C7AC74E002E83F9 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = AC6BFAE01C7AC74E002E83F9 /* MBProgressHUD.m */; };
 		AC6BFAE71C7ACDFB002E83F9 /* SAAccountTool.m in Sources */ = {isa = PBXBuildFile; fileRef = AC6BFAE61C7ACDFB002E83F9 /* SAAccountTool.m */; };
+		AC70C9E21C8EB23F00B13EE0 /* SAEmotionTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = AC70C9E11C8EB23F00B13EE0 /* SAEmotionTextView.m */; };
+		AC70C9E81C8F0D2F00B13EE0 /* UITextView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = AC70C9E71C8F0D2F00B13EE0 /* UITextView+Extension.m */; };
 		AC731B9A1C8040A60003C142 /* SAStatusToolBar.m in Sources */ = {isa = PBXBuildFile; fileRef = AC731B991C8040A60003C142 /* SAStatusToolBar.m */; };
 		AC731B9D1C8041100003C142 /* SAStatusCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AC731B9C1C8041100003C142 /* SAStatusCell.m */; };
 		AC7E971C1C73605B00BBE4DC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AC7E97191C73605B00BBE4DC /* main.m */; };
@@ -275,6 +277,10 @@
 		AC6BFAE01C7AC74E002E83F9 /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
 		AC6BFAE51C7ACDFB002E83F9 /* SAAccountTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SAAccountTool.h; sourceTree = "<group>"; };
 		AC6BFAE61C7ACDFB002E83F9 /* SAAccountTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SAAccountTool.m; sourceTree = "<group>"; };
+		AC70C9E01C8EB23F00B13EE0 /* SAEmotionTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SAEmotionTextView.h; sourceTree = "<group>"; };
+		AC70C9E11C8EB23F00B13EE0 /* SAEmotionTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SAEmotionTextView.m; sourceTree = "<group>"; };
+		AC70C9E61C8F0D2F00B13EE0 /* UITextView+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextView+Extension.h"; sourceTree = "<group>"; };
+		AC70C9E71C8F0D2F00B13EE0 /* UITextView+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextView+Extension.m"; sourceTree = "<group>"; };
 		AC731B981C8040A60003C142 /* SAStatusToolBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SAStatusToolBar.h; sourceTree = "<group>"; };
 		AC731B991C8040A60003C142 /* SAStatusToolBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SAStatusToolBar.m; sourceTree = "<group>"; };
 		AC731B9B1C8041100003C142 /* SAStatusCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SAStatusCell.h; sourceTree = "<group>"; };
@@ -454,6 +460,8 @@
 				ACD818061C88261A00A1F159 /* SAEmotionTabBar.m */,
 				AC3065C61C886C1700672176 /* SAEmotionTabBarButton.h */,
 				AC3065C71C886C1700672176 /* SAEmotionTabBarButton.m */,
+				AC70C9E01C8EB23F00B13EE0 /* SAEmotionTextView.h */,
+				AC70C9E11C8EB23F00B13EE0 /* SAEmotionTextView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -610,6 +618,8 @@
 				AC8145831C81931C00F51A55 /* NSDate+Extension.m */,
 				AC8145851C81D82100F51A55 /* NSString+Extension.h */,
 				AC8145861C81D82100F51A55 /* NSString+Extension.m */,
+				AC70C9E61C8F0D2F00B13EE0 /* UITextView+Extension.h */,
+				AC70C9E71C8F0D2F00B13EE0 /* UITextView+Extension.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -1056,6 +1066,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AC2242231C7EE56300464561 /* MJArgument.m in Sources */,
+				AC70C9E81C8F0D2F00B13EE0 /* UITextView+Extension.m in Sources */,
 				AC16A5D61C7B4EB200139596 /* SDWebImageDecoder.m in Sources */,
 				AC8145841C81931C00F51A55 /* NSDate+Extension.m in Sources */,
 				AC16A5D91C7B4EB200139596 /* SDWebImageManager.m in Sources */,
@@ -1136,6 +1147,7 @@
 				AC0EEFD21C79EEA800512949 /* SAOAuthViewController.m in Sources */,
 				AC0F9DE51C7BEC8B00DD4B18 /* SAUser.m in Sources */,
 				AC0EEFEC1C7A097800512949 /* AFNetworkReachabilityManager.m in Sources */,
+				AC70C9E21C8EB23F00B13EE0 /* SAEmotionTextView.m in Sources */,
 				AC1490AE1C846FE000171072 /* SAStatusPhotoView.m in Sources */,
 				AC0EEFF01C7A097800512949 /* AFURLResponseSerialization.m in Sources */,
 				AC3065C81C886C1700672176 /* SAEmotionTabBarButton.m in Sources */,
