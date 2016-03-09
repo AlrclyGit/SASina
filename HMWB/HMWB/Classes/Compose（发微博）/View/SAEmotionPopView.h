@@ -8,8 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@class SAEmotion;
+@class SAEmotion,SAEmotionButton;
 @interface SAEmotionPopView : UIView
 + (instancetype)popView;
 @property (nonatomic, strong) SAEmotion *emotion;
+- (void)showFrom:(SAEmotionButton *)button;
 @end

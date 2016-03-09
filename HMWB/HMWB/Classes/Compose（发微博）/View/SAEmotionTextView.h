@@ -11,4 +11,5 @@
 
 @interface SAEmotionTextView : SATextView
 - (void)insertEmotion:(SAEmotion *)emotion;
+- (NSString *)fullText;
 @end

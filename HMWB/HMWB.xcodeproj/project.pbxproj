@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AC05F3B21C902963002CC3BE /* SAEmotionTextAttachment.m in Sources */ = {isa = PBXBuildFile; fileRef = AC05F3B11C902963002CC3BE /* SAEmotionTextAttachment.m */; };
 		AC0E44E51C7AE02D00DCD867 /* UIWindow+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = AC0E44E41C7AE02D00DCD867 /* UIWindow+Extension.m */; };
 		AC0EEFD21C79EEA800512949 /* SAOAuthViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AC0EEFD11C79EEA800512949 /* SAOAuthViewController.m */; };
 		AC0EEFE91C7A097800512949 /* AFHTTPRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = AC0EEFD71C7A097800512949 /* AFHTTPRequestOperation.m */; };
@@ -128,6 +129,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		AC05F3B01C902963002CC3BE /* SAEmotionTextAttachment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SAEmotionTextAttachment.h; sourceTree = "<group>"; };
+		AC05F3B11C902963002CC3BE /* SAEmotionTextAttachment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SAEmotionTextAttachment.m; sourceTree = "<group>"; };
 		AC0E44E31C7AE02D00DCD867 /* UIWindow+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIWindow+Extension.h"; sourceTree = "<group>"; };
 		AC0E44E41C7AE02D00DCD867 /* UIWindow+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIWindow+Extension.m"; sourceTree = "<group>"; };
 		AC0EEFD01C79EEA800512949 /* SAOAuthViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SAOAuthViewController.h; sourceTree = "<group>"; };
@@ -779,6 +782,8 @@
 			children = (
 				AC6466711C897D5C00B1468A /* SAEmotion.h */,
 				AC6466721C897D5C00B1468A /* SAEmotion.m */,
+				AC05F3B01C902963002CC3BE /* SAEmotionTextAttachment.h */,
+				AC05F3B11C902963002CC3BE /* SAEmotionTextAttachment.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -1081,6 +1086,7 @@
 				AC2242261C7EE56300464561 /* MJIvar.m in Sources */,
 				AC62F8251C75EC1B00428D1F /* UIView+Extension.m in Sources */,
 				ACB1A5931C770BE50045BE22 /* SATabBar.m in Sources */,
+				AC05F3B21C902963002CC3BE /* SAEmotionTextAttachment.m in Sources */,
 				AC16A5D21C7B4EB200139596 /* MKAnnotationView+WebCache.m in Sources */,
 				AC6BFAE71C7ACDFB002E83F9 /* SAAccountTool.m in Sources */,
 				AC62F8331C75EC6500428D1F /* SADropdownMenu.m in Sources */,

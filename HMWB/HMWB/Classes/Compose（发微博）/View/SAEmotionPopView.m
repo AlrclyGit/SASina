@@ -24,8 +24,20 @@
     _emotion = emotion;
     
     self.emotionButton.emotion = emotion;
+}
+
+- (void)showFrom:(SAEmotionButton *)button{
+    // 给popView传递数据
+    self.emotion = button.emotion;
     
-   
+    //取得最上面的Window
+    UIWindow *window = [[UIApplication  sharedApplication].windows lastObject];
+    [window addSubview:self];
+    
+    //计算出被点击的按钮在widnow中的frame
+    CGRect bntFrame = [button convertRect:button.bounds toView:nil];
+    self.y = CGRectGetMidY(bntFrame) - self.height;
+    self.centerX = CGRectGetMidX(bntFrame);
 }
 
 @end

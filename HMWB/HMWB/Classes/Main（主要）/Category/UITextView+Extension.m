@@ -10,7 +10,12 @@
 
 @implementation UITextView (Extension)
 
-- (void)insertAttributeText:(NSAttributedString *)text {
+- (void)insertAttributedText:(NSAttributedString *)text {
+    [self insertAttributedText:text settingBlock:nil];
+
+}
+
+- (void)insertAttributedText:(NSAttributedString *)text settingBlock:(void (^)(NSMutableAttributedString *))settingBlock {
     //创建一个属性化字符串
     NSMutableAttributedString *attributedText = [[NSMutableAttributedString alloc] init];
     //将之前的文字拼接上来
@@ -19,6 +24,10 @@
     NSUInteger loc = self.selectedRange.location;
     //将附件text插入到loc
     [attributedText insertAttributedString:text atIndex:loc];
+    //调用外面传进来的方法
+    if (settingBlock) {
+        settingBlock(attributedText);
+    }
     //设置到文本
     self.attributedText = attributedText;
     //移动光标到表情的后面

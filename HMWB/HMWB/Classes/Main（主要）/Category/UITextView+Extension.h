@@ -9,5 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface UITextView (Extension)
-- (void)insertAttributeText:(NSAttributedString *)imageStr;
+- (void)insertAttributedText:(NSAttributedString *)text;
+- (void)insertAttributedText:(NSAttributedString *)text settingBlock:(void (^)(NSMutableAttributedString *AttributeText))settingBlock;
 @end

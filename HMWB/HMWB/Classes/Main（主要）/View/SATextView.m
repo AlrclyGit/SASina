@@ -48,9 +48,15 @@
     [self setNeedsDisplay];
 }
 
-/**  重写*/
+/**  重写设置字体*/
 - (void)setFont:(UIFont *)font{
     [super setFont:font];
+    [self setNeedsDisplay];
+}
+
+/** 重写属性文字*/
+- (void)setAttributedText:(NSAttributedString *)attributedText {
+    [super setAttributedText:attributedText];
     [self setNeedsDisplay];
 }
 

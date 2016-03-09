@@ -154,6 +154,9 @@
     //表情选中的通知
     [SANotificationCenter addObserver:self selector:@selector(emotionDidSelect:) name:@"SAEmotionDidSelectNotification" object:nil];
     
+    //删除文字的通知
+    [SANotificationCenter addObserver:self selector:@selector(emotionDidDelete) name:@"SAEmotionDidDeleteNotification" object:nil];
+    
     //键盘的frame发生改变就会调用（位置和尺寸）
     //    UIKeyboardWillChangeFrameNotification;
     //    UIKeyboardDidChangeFrameNotification;
@@ -198,6 +201,14 @@
 #pragma mark - 监听方法
 
 /**
+ * 表情删除按钮点击
+ */
+- (void)emotionDidDelete {
+    //删除文字内容
+    [self.textView deleteBackward];
+}
+
+/**
  *  表情按钮点击
  */
 - (void)emotionDidSelect:(NSNotification *)notification {
@@ -210,15 +221,7 @@
  * 监听键盘改变
  */
 - (void) keyboardWillChangeFrame:(NSNotification *)notification{
-    /**
-     //键盘弹出后的Frame
-     UIKeyboardFrameEndUserInfoKey = NSRrct:{{0,352},{320,216}},
-     //键盘弹出\隐藏所费的时间
-     UIKeyboardAnimationDurationUserInfoKey = 0.25,
-     //键盘弹出\隐藏动画的执行节奏
-     UIKeyboardAnimationCurveUserInfoKey,
-     */
-    
+ 
     if (self.switchingKeybaord) return;
     
     //取出包含键盘的字典
@@ -233,6 +236,15 @@
         //设置工具条的位置，随键盘变化
         self.toolBar.y = keyboardF.origin.y - self.toolBar.height;
     }];
+    
+    /**
+     //键盘弹出后的Frame
+     UIKeyboardFrameEndUserInfoKey = NSRrct:{{0,352},{320,216}},
+     //键盘弹出\隐藏所费的时间
+     UIKeyboardAnimationDurationUserInfoKey = 0.25,
+     //键盘弹出\隐藏动画的执行节奏
+     UIKeyboardAnimationCurveUserInfoKey,
+     */
 }
 
 /**
@@ -289,10 +301,10 @@
         [formData appendPartWithFileData:data name:@"pic" fileName:@"test.jpg" mimeType:@"image/jpeg"];
         
     } success:^(AFHTTPRequestOperation *operation, id responseObject) {
-        SALog(@"获取用户名称请求成功");
+        SALog(@"发送微博成功（图片）");
         [MBProgressHUD showSuccess:@"发送成功"];
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-        SALog(@"获取用户名称请求失败——%@",error);
+        SALog(@"发送微博失败（图片）——%@",error);
         [MBProgressHUD showError:@"发送失败"];
     }];
 }
@@ -308,14 +320,14 @@
     SAAccount *accout = [SAAccountTool account];
     NSMutableDictionary *params = [NSMutableDictionary dictionary];
     params[@"access_token"] = accout.access_token;
-    params[@"status"] = self.textView.text;
+    params[@"status"] = self.textView.fullText;
     
     //3.发送请求
     [mgr POST:@"https://api.weibo.com/2/statuses/update.json" parameters:params success:^(AFHTTPRequestOperation *operation, NSDictionary *responseObject) {
-        SALog(@"获取用户名称请求成功（图片）");
+        SALog(@"发送微博成功");
         [MBProgressHUD showSuccess:@"发送成功"];
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-        SALog(@"获取用户名称请求失败（图片）——%@",error);
+        SALog(@"发送微博失败（——%@",error);
         [MBProgressHUD showError:@"发送失败"];
     }];
 }
@@ -416,6 +428,9 @@
 
     //退出键盘
     [self.textView endEditing:YES];
+    
+    //结束
+    self.switchingKeybaord = NO;
 
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
         //弹出键盘
