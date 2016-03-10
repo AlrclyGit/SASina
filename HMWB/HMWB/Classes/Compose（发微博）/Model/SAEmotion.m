@@ -7,7 +7,14 @@
 //
 
 #import "SAEmotion.h"
+#import "MJExtension.h"
+
+@interface SAEmotion() <NSCoding>
+
+@end
 
 @implementation SAEmotion
+
+MJCodingImplementation
 
 @end

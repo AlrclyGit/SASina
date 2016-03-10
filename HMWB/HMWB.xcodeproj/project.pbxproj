@@ -55,6 +55,7 @@
 		AC22422B1C7EE56300464561 /* NSObject+MJCoding.m in Sources */ = {isa = PBXBuildFile; fileRef = AC22421E1C7EE56300464561 /* NSObject+MJCoding.m */; };
 		AC22422C1C7EE56300464561 /* NSObject+MJKeyValue.m in Sources */ = {isa = PBXBuildFile; fileRef = AC2242201C7EE56300464561 /* NSObject+MJKeyValue.m */; };
 		AC22422D1C7EE56300464561 /* NSObject+MJMember.m in Sources */ = {isa = PBXBuildFile; fileRef = AC2242221C7EE56300464561 /* NSObject+MJMember.m */; };
+		AC29D4C21C919AEF0076390B /* SAEmotionTool.m in Sources */ = {isa = PBXBuildFile; fileRef = AC29D4C11C919AEF0076390B /* SAEmotionTool.m */; };
 		AC3065C81C886C1700672176 /* SAEmotionTabBarButton.m in Sources */ = {isa = PBXBuildFile; fileRef = AC3065C71C886C1700672176 /* SAEmotionTabBarButton.m */; };
 		AC44B6611C857D1800F8679D /* SATextView.m in Sources */ = {isa = PBXBuildFile; fileRef = AC44B6601C857D1800F8679D /* SATextView.m */; };
 		AC543AEA1C8D6A2E0029D6BE /* SAEmotionPopView.m in Sources */ = {isa = PBXBuildFile; fileRef = AC543AE91C8D6A2E0029D6BE /* SAEmotionPopView.m */; };
@@ -226,6 +227,8 @@
 		AC2242201C7EE56300464561 /* NSObject+MJKeyValue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+MJKeyValue.m"; sourceTree = "<group>"; };
 		AC2242211C7EE56300464561 /* NSObject+MJMember.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+MJMember.h"; sourceTree = "<group>"; };
 		AC2242221C7EE56300464561 /* NSObject+MJMember.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+MJMember.m"; sourceTree = "<group>"; };
+		AC29D4C01C919AEF0076390B /* SAEmotionTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SAEmotionTool.h; sourceTree = "<group>"; };
+		AC29D4C11C919AEF0076390B /* SAEmotionTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SAEmotionTool.m; sourceTree = "<group>"; };
 		AC3065C61C886C1700672176 /* SAEmotionTabBarButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SAEmotionTabBarButton.h; sourceTree = "<group>"; };
 		AC3065C71C886C1700672176 /* SAEmotionTabBarButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SAEmotionTabBarButton.m; sourceTree = "<group>"; };
 		AC44B65F1C857D1800F8679D /* SATextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SATextView.h; sourceTree = "<group>"; };
@@ -497,6 +500,15 @@
 				AC2242221C7EE56300464561 /* NSObject+MJMember.m */,
 			);
 			path = MJExtension;
+			sourceTree = "<group>";
+		};
+		AC29D4BF1C919ACA0076390B /* Tool */ = {
+			isa = PBXGroup;
+			children = (
+				AC29D4C01C919AEF0076390B /* SAEmotionTool.h */,
+				AC29D4C11C919AEF0076390B /* SAEmotionTool.m */,
+			);
+			path = Tool;
 			sourceTree = "<group>";
 		};
 		AC62F7E91C75EC1B00428D1F /* Discover（发现） */ = {
@@ -897,6 +909,7 @@
 		ACE500331C8538BE00B99BE5 /* Compose（发微博） */ = {
 			isa = PBXGroup;
 			children = (
+				AC29D4BF1C919ACA0076390B /* Tool */,
 				AC6466701C897D3000B1468A /* Model */,
 				AC20D0DA1C86A97400823AE9 /* View */,
 				ACE500341C8538F200B99BE5 /* Controller */,
@@ -1141,6 +1154,7 @@
 				AC0EEFEA1C7A097800512949 /* AFHTTPRequestOperationManager.m in Sources */,
 				ACD818041C88242400A1F159 /* SAEmotionKeyboard.m in Sources */,
 				AC731B9D1C8041100003C142 /* SAStatusCell.m in Sources */,
+				AC29D4C21C919AEF0076390B /* SAEmotionTool.m in Sources */,
 				AC16A5E11C7B4EB200139596 /* UIView+WebCacheOperation.m in Sources */,
 				AC62F8261C75EC1B00428D1F /* SAMainViewController.m in Sources */,
 				AC16A5DA1C7B4EB200139596 /* SDWebImagePrefetcher.m in Sources */,

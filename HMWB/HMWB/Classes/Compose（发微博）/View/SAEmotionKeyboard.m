@@ -11,6 +11,7 @@
 #import "SAEmotionListView.h"
 #import "SAEmotion.h"
 #import "MJExtension.h"
+#import "SAEmotionTool.h"
 
 @interface SAEmotionKeyboard() <SAEmotionTabBarDelegate>
 /** 容纳表情内容的控件*/
@@ -30,6 +31,7 @@
 - (SAEmotionListView *)recentListView{
     if (_recentListView == nil) {
         _recentListView = [[SAEmotionListView alloc]init];
+        self.recentListView.emotions = [SAEmotionTool recentEmotions];
     }
     return _recentListView;
 }

@@ -10,6 +10,7 @@
 #import "SAEmotion.h"
 #import "SAEmotionPopView.h"
 #import "SAEmotionButton.h"
+#import "SAEmotionTool.h"
 
 @interface SAEmotionPageView ()
 /** 点击表情后弹出的放大镜*/
@@ -74,10 +75,7 @@
         case UIGestureRecognizerStateEnded:{//结束
             [self.popView removeFromSuperview];
             if (btn) {
-                //发出表情按钮被点击通知
-                NSMutableDictionary *userInfo = [NSMutableDictionary dictionary];
-                userInfo[@"selectedEmotion"] = btn.emotion;
-                [SANotificationCenter postNotificationName:@"SAEmotionDidSelectNotification" object:nil userInfo:userInfo];
+                [self selectEmotion:btn.emotion];
             }
             break;
         }
@@ -132,12 +130,23 @@
         [self.popView removeFromSuperview];
     });
     
+    [self selectEmotion:btn.emotion];
+   }
+
+
+/**
+ * 选中某个表情发出通知
+ */
+- (void) selectEmotion:(SAEmotion *)emotion{
+    
+    // 将这个表情存进沙盒
+    [SAEmotionTool addRecentEmotion:emotion];
+    
     //发出表情按钮被点击通知
     NSMutableDictionary *userInfo = [NSMutableDictionary dictionary];
-    userInfo[@"selectedEmotion"] = btn.emotion;
+    userInfo[@"selectedEmotion"] = emotion;
     [SANotificationCenter postNotificationName:@"SAEmotionDidSelectNotification" object:nil userInfo:userInfo];
 }
-
 
 /**
  * 子控件的位置

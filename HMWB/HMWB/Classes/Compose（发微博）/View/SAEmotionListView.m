@@ -36,6 +36,8 @@
         
         //2.表情页数
         UIPageControl *pageControl = [[UIPageControl alloc] init];
+        pageControl.hidesForSinglePage = YES;
+        pageControl.userInteractionEnabled = NO;
         //用KVC换图片
         [pageControl setValue:[UIImage imageNamed:@"compose_keyboard_dot_normal"] forKey:@"pageImage"];
         [pageControl setValue:[UIImage imageNamed:@"compose_keyboard_dot_selected"] forKey:@"currentPageImage"];

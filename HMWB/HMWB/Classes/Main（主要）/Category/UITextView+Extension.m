@@ -22,8 +22,10 @@
     [attributedText appendAttributedString:self.attributedText];
     //获得当前光标位置
     NSUInteger loc = self.selectedRange.location;
-    //将附件text插入到loc
-    [attributedText insertAttributedString:text atIndex:loc];
+    //用附件替换
+    [attributedText replaceCharactersInRange:self.selectedRange withAttributedString:text];
+//    //将附件text插入到loc
+//    [attributedText insertAttributedString:text atIndex:loc];
     //调用外面传进来的方法
     if (settingBlock) {
         settingBlock(attributedText);
