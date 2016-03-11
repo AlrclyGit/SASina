@@ -13,29 +13,39 @@
 
 @implementation SAEmotionTool
 
+static NSMutableArray * _recentEmotons;
+
+
++ (void)initialize {
+    // 加载沙盒中的表情数据
+    _recentEmotons = [NSKeyedUnarchiver unarchiveObjectWithFile:SARecentEmotionsPath];
+    if (_recentEmotons == nil) {
+        _recentEmotons = [NSMutableArray array];
+    }
+
+}
+
 /**
  * 添加
  */
 + (void)addRecentEmotion:(SAEmotion *)emotion {
     
-    // 加载沙盒中的表情数据
-    NSMutableArray *emotions = (NSMutableArray *)[self recentEmotions];
-    if (emotions == nil) {
-        emotions = [NSMutableArray array];
-    }
+    
+    //删除重复的表情.本来只能比较地址，但重写了emotons的isEqual方法，使之比较字符串
+    [_recentEmotons removeObject:emotion];
     
     // 将表情放到数组的最前面
-    [emotions insertObject:emotion atIndex:0];
+    [_recentEmotons insertObject:emotion atIndex:0];
     
     // 将所有的表情数据写入沙盒
-    [NSKeyedArchiver archiveRootObject:emotions toFile:SARecentEmotionsPath];
+    [NSKeyedArchiver archiveRootObject:_recentEmotons toFile:SARecentEmotionsPath];
 }
 
 /**
  * 使用
  */
 + (NSArray *)recentEmotions {
-    return  [NSKeyedUnarchiver unarchiveObjectWithFile:SARecentEmotionsPath];
+    return _recentEmotons;
 }
 
 @end

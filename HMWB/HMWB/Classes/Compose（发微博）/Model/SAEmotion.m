@@ -17,4 +17,8 @@
 
 MJCodingImplementation
 
+- (BOOL)isEqual:(SAEmotion *)object{
+    return [self.chs isEqualToString:object.chs] || [self.code isEqualToString: object.code];
+}
+
 @end

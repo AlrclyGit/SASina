@@ -17,6 +17,7 @@
 #import "NSString+Extension.h"
 #import "NSString+Emoji.h"
 #import "UITextView+Extension.h"
+#import "SAConst.h"
 
 #define SANotificationCenter  [NSNotificationCenter defaultCenter]
 // Include any system framework and library headers here that should be included in all compilation units.

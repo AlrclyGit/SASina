@@ -31,7 +31,7 @@
 - (SAEmotionListView *)recentListView{
     if (_recentListView == nil) {
         _recentListView = [[SAEmotionListView alloc]init];
-        self.recentListView.emotions = [SAEmotionTool recentEmotions];
+      
     }
     return _recentListView;
 }
@@ -110,8 +110,8 @@
     
     switch (buttonType) {
         case SAEmotionTabBarButtonTypeRecent:{//最近
+            self.recentListView.emotions = [SAEmotionTool recentEmotions];
             [self.contentView addSubview:self.recentListView];
-            
             SALog(@"最近");
             break;
         }

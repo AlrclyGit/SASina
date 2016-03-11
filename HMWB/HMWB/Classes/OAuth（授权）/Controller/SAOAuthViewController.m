@@ -47,7 +47,7 @@
 
 - (void)webViewDidFinishLoad:(UIWebView *)webView{
     [MBProgressHUD hideHUD];
-}
+} 
 
 - (void)webViewDidStartLoad:(UIWebView *)webView{
     [MBProgressHUD showMessage:@"正在登录中……"];
