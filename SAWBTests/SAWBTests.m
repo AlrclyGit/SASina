@@ -1,18 +1,18 @@
 //
-//  HMWBTests.m
-//  HMWBTests
+//  SAWBTests.m
+//  SAWBTests
 //
-//  Created by SuzukiAlrcly on 16/2/16.
+//  Created by SuzukiAlrcly on 16/3/14.
 //  Copyright © 2016年 SuzukiAlrcly. All rights reserved.
 //
 
 #import <XCTest/XCTest.h>
 
-@interface HMWBTests : XCTestCase
+@interface SAWBTests : XCTestCase
 
 @end
 
-@implementation HMWBTests
+@implementation SAWBTests
 
 - (void)setUp {
     [super setUp];

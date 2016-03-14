@@ -76,10 +76,10 @@
      //集成上拉刷新控件
     [self setupUPRefresh];
     
-    //获得未读数
-    NSTimer *timer = [NSTimer scheduledTimerWithTimeInterval:10 target:self selector:@selector(setupUnredadCount) userInfo:nil repeats:YES];
-    //主线程也会抽时间优先处理下timer（不管主线程是否正在处理其他事件）
-    [[NSRunLoop mainRunLoop] addTimer:timer forMode:NSRunLoopCommonModes];
+//    //获得未读数
+//    NSTimer *timer = [NSTimer scheduledTimerWithTimeInterval:10 target:self selector:@selector(setupUnredadCount) userInfo:nil repeats:YES];
+//    //主线程也会抽时间优先处理下timer（不管主线程是否正在处理其他事件）
+//    [[NSRunLoop mainRunLoop] addTimer:timer forMode:NSRunLoopCommonModes];
 }
 
 /**

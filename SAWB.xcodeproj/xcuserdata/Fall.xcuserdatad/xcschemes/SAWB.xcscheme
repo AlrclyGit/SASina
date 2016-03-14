@@ -14,10 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "ACBB0CEE1C72D5E9007C128C"
-               BuildableName = "HMWB.app"
-               BlueprintName = "HMWB"
-               ReferencedContainer = "container:HMWB.xcodeproj">
+               BlueprintIdentifier = "AC8B23701C96857100204A5C"
+               BuildableName = "SAWB.app"
+               BlueprintName = "SAWB"
+               ReferencedContainer = "container:SAWB.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -32,30 +32,30 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "ACBB0D071C72D5E9007C128C"
-               BuildableName = "HMWBTests.xctest"
-               BlueprintName = "HMWBTests"
-               ReferencedContainer = "container:HMWB.xcodeproj">
+               BlueprintIdentifier = "AC8B23891C96857100204A5C"
+               BuildableName = "SAWBTests.xctest"
+               BlueprintName = "SAWBTests"
+               ReferencedContainer = "container:SAWB.xcodeproj">
             </BuildableReference>
          </TestableReference>
          <TestableReference
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "ACBB0D121C72D5E9007C128C"
-               BuildableName = "HMWBUITests.xctest"
-               BlueprintName = "HMWBUITests"
-               ReferencedContainer = "container:HMWB.xcodeproj">
+               BlueprintIdentifier = "AC8B23941C96857100204A5C"
+               BuildableName = "SAWBUITests.xctest"
+               BlueprintName = "SAWBUITests"
+               ReferencedContainer = "container:SAWB.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "ACBB0CEE1C72D5E9007C128C"
-            BuildableName = "HMWB.app"
-            BlueprintName = "HMWB"
-            ReferencedContainer = "container:HMWB.xcodeproj">
+            BlueprintIdentifier = "AC8B23701C96857100204A5C"
+            BuildableName = "SAWB.app"
+            BlueprintName = "SAWB"
+            ReferencedContainer = "container:SAWB.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -75,10 +75,10 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "ACBB0CEE1C72D5E9007C128C"
-            BuildableName = "HMWB.app"
-            BlueprintName = "HMWB"
-            ReferencedContainer = "container:HMWB.xcodeproj">
+            BlueprintIdentifier = "AC8B23701C96857100204A5C"
+            BuildableName = "SAWB.app"
+            BlueprintName = "SAWB"
+            ReferencedContainer = "container:SAWB.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -94,10 +94,10 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "ACBB0CEE1C72D5E9007C128C"
-            BuildableName = "HMWB.app"
-            BlueprintName = "HMWB"
-            ReferencedContainer = "container:HMWB.xcodeproj">
+            BlueprintIdentifier = "AC8B23701C96857100204A5C"
+            BuildableName = "SAWB.app"
+            BlueprintName = "SAWB"
+            ReferencedContainer = "container:SAWB.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
